@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ETC - Software House</title>
+    <!--To be separated-->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        header nav a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        section {
+            padding: 20px 0;
+            border-bottom: 1px solid #ccc;
+        }
+        #services, #about, #contact {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        #contact form {
+            display: flex;
+            flex-direction: column;
+        }
+        #contact form input, #contact form textarea {
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        #contact form button {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #333;
+            color: #fff;
+            cursor: pointer;
+        }
+        @media (max-width: 768px) {
+            .container {
+                width: 100%;
+                padding: 0 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <h1>ETC Software House</h1>
+        <nav>
+            <a href="#services">Services</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </div>
+</header>
+
+<div class="container">
+    <section id="services">
+        <!--Some random text (placeholders)-->
+        <h2>Our Services</h2>
+        <p>At ETC, we offer a wide range of software development services including:</p>
+        <ul>
+            <li>Web Development</li>
+            <li>Mobile App Development</li>
+            <li>Custom Software Solutions</li>
+            <li>IT Consulting</li>
+        </ul>
+    </section>
+
+    <!--Some random text (placeholders)-->
+    <section id="about">
+        <h2>About Us</h2>
+        <p>ETC is a leading software house dedicated to providing innovative software solutions. Our team of experts is committed to delivering high-quality services tailored to meet the unique needs of our clients.</p>
+    </section>
+
+    <!--This is not working (also placeholder)-->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form>
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+</div>
+
+</body>
+</html>
