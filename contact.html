@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        min-height: 100vh;
+        padding: 0;
+        margin: 0;
+        font-family: Roboto, Arial, sans-serif;
+        font-size: 14px;
+        color: #666;
+      }
+      body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: #333;
+      }
+      form {
+        position: relative;
+        width: 80%;
+        border-radius: 30px;
+        background: #444;
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 40px 0;
+      }
+      h1 {
+        margin-top: 0;
+        font-weight: 500;
+        color: #f4f4f4;
+      }
+      .form-left-decoration,
+      .form-right-decoration {
+        content: "";
+        position: absolute;
+        width: 50px;
+        height: 20px;
+        border-radius: 20px;
+        background: #333;
+      }
+      .form-left-decoration {
+        bottom: 60px;
+        left: -30px;
+      }
+      .form-right-decoration {
+        top: 60px;
+        right: -30px;
+      }
+      .form-left-decoration:before,
+      .form-left-decoration:after,
+      .form-right-decoration:before,
+      .form-right-decoration:after {
+        content: "";
+        position: absolute;
+        width: 50px;
+        height: 20px;
+        border-radius: 30px;
+        background: #444;
+      }
+      .form-left-decoration:before {
+        top: -20px;
+      }
+      .form-left-decoration:after {
+        top: 20px;
+        left: 10px;
+      }
+      .form-right-decoration:before {
+        top: -20px;
+        right: 0;
+      }
+      .form-right-decoration:after {
+        top: 20px;
+        right: 10px;
+      }
+      .circle {
+        position: absolute;
+        bottom: 80px;
+        left: -55px;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: #444;
+      }
+      .form-inner {
+        padding: 40px;
+        background-color: #444;
+        width: 100%;
+      }
+      .form-inner input,
+      .form-inner textarea {
+        display: block;
+        width: 100%;
+        padding: 15px;
+        margin-bottom: 10px;
+        border: black 3px solid;
+        border-radius: 20px;
+        background: #444;
+      }
+      .form-inner textarea {
+        resize: none;
+      }
+      button {
+        width: 100%;
+        padding: 10px;
+        margin-top: 20px;
+        border-radius: 20px;
+        border: none;
+        border-bottom: 4px solid #222;
+        background: #333;
+        font-size: 16px;
+        font-weight: 400;
+        color: #fff;
+      }
+      button:hover {
+        background: #222;
+      }
+      @media (min-width: 568px) {
+        form {
+          width: 60%;
+        }
+      }
+      footer {
+        background-color: #333;
+        color: #fff;
+        padding: 20px 0;
+        text-align: center;
+        font-size: 0.9em;
+        width: 100%;
+      }
+      footer nav a {
+        color: #fff;
+        margin: 0 10px;
+        text-decoration: none;
+        font-size: 0.9em;
+      }
+      footer nav a:hover {
+        color: #f4f4f4;
+      }
+
+      #language-toggle {
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        background-color: #333;
+        color: #fff;
+        border: none;
+        padding: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      header {
+        background-color: #333;
+        color: #fff;
+        padding: 20px 0;
+        text-align: center;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+      }
+      header nav a {
+        color: #fff;
+        margin: 0 15px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.3s;
+      }
+
+      header nav a:hover {
+        color: #f4f4f4;
+      }
+
+      header .container {
+        padding-top: 0px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1 data-lang="welcome-title">ETC Software House</h1>
+        <button id="language-toggle" data-lang="language-toggle">
+          EN / PL
+        </button>
+      </div>
+    </header>
+    <form action="/" class="decor">
+      <div class="form-left-decoration"></div>
+      <div class="form-right-decoration"></div>
+      <div class="circle"></div>
+      <div class="form-inner">
+        <h1 data-lang="contact">Contact us</h1>
+        <input type="text" placeholder="Username" />
+        <input type="email" placeholder="Email" />
+        <textarea placeholder="Message..." rows="5"></textarea>
+        <button type="submit" data-lang="send">Send</button>
+      </div>
+    </form>
+    <footer>
+      <div class="container">
+        <p data-lang="copyright">
+          © 2024 ETC Software House. All rights reserved.
+        </p>
+      </div>
+    </footer>
+    <script src="language-toggle.js"></script>
+  </body>
+</html>
