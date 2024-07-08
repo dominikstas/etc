@@ -14,6 +14,32 @@ p, li, input, textarea, button {
     font-weight: 400;
 }
 
+#dark-mode-toggle {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    position: relative;
+}
+
+#dark-mode-toggle .icon {
+    width: 2.5vw;
+    height: 5vh;
+    display: none;
+}
+
+#dark-mode-toggle .moon {
+    display: block;
+}
+
+.dark-mode .moon {
+    display: none;
+}
+
+.dark-mode .sun {
+    display: block;
+}
+
 /* Delayed fade-in for staggered effect */
 #services {
     animation-delay: 0.2s;

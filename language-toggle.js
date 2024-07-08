@@ -1,7 +1,7 @@
 // Define translations for English and Polish
 const translations = {
     'en': {
-        'welcome-title': 'Welcome to ETC Software House',
+        'welcome-title': 'ETC',
         'welcome-text': 'Innovative solutions for your business',
         'services': 'Our Services',
         'about': 'About Us',
@@ -26,7 +26,7 @@ const translations = {
         // Add more translations as needed
     },
     'pl': {
-        'welcome-title': 'Witaj w ETC Software House',
+        'welcome-title': 'ETC',
         'welcome-text': 'Innowacyjne rozwiązania dla Twojej firmy',
         'services': 'Nasze Usługi',
         'about': 'O Nas',
