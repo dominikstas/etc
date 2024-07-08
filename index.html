@@ -52,7 +52,7 @@
     </section>
 
     <section id="testimonials">
-        <div class="container">
+        <div class="card">
             <h2>What Our Clients Say</h2>
             <div class="testimonials-wrapper">
                 <div class="testimonial-card">
@@ -96,22 +96,7 @@
         </nav>
     </div>
 </footer>
-<script>
-    // JavaScript for smooth scrolling
-    document.querySelectorAll('nav a').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            e.preventDefault();
-
-            const targetId = this.getAttribute('href').substring(1);
-            const targetSection = document.getElementById(targetId);
-
-            window.scrollTo({
-                top: targetSection.offsetTop,
-                behavior: 'smooth'
-            });
-        });
-    });
-</script>
+<script src="smoothscrolling.js"></script>
 <script src="dlmode.js"></script>
 </body>
 </html>
