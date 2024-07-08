@@ -7,7 +7,22 @@ const translations = {
         'about': 'About Us',
         'testimonials': 'What Our Clients Say',
         'contact': 'Contact Us',
-        'send': 'Send'
+        'send': 'Send',
+        'web-development': 'Web Development',
+        'mobile-app-development': 'Mobile App Development',
+        'custom-software-solutions': 'Custom Software Solutions',
+        'it-consulting': 'IT Consulting',
+        'our-services': 'Our Services',
+        'about-us': 'About Us',
+        'what-our-clients-say': 'What Our Clients Say',
+        'your-name': 'Your Name',
+        'your-email': 'Your Email',
+        'your-message': 'Your Message',
+        'services-description': 'At ETC, we offer a wide range of software development services including:',
+        'about-description': 'ETC is a leading software house dedicated to providing innovative software solutions. Our team of experts is committed to delivering high-quality services tailored to meet the unique needs of our clients.',
+        'contact-description': '', // Add translation if needed
+        'co-mowia-o-nas-klienci': 'What Our Clients Say',
+        'copyright': '© 2024 ETC Software House. All rights reserved.',
         // Add more translations as needed
     },
     'pl': {
@@ -17,7 +32,22 @@ const translations = {
         'about': 'O Nas',
         'testimonials': 'Co mówią o nas klienci',
         'contact': 'Kontakt',
-        'send': 'Wyślij'
+        'send': 'Wyślij',
+        'web-development': 'Tworzenie stron internetowych',
+        'mobile-app-development': 'Tworzenie aplikacji mobilnych',
+        'custom-software-solutions': 'Niestandardowe rozwiązania oprogramowania',
+        'it-consulting': 'Doradztwo informatyczne',
+        'our-services': 'Nasze Usługi',
+        'about-us': 'O Nas',
+        'what-our-clients-say': 'Co mówią o nas klienci',
+        'your-name': 'Twoje Imię',
+        'your-email': 'Twój Email',
+        'your-message': 'Twoja Wiadomość',
+        'services-description': 'W ETC oferujemy szeroki zakres usług w zakresie rozwoju oprogramowania, w tym:',
+        'about-description': 'ETC to wiodący dom oprogramowania, dedykowany dostarczaniu innowacyjnych rozwiązań oprogramowania. Nasz zespół ekspertów zobowiązuje się dostarczać wysokiej jakości usługi dostosowane do unikalnych potrzeb naszych klientów.',
+        'contact-description': '', // Add translation if needed
+        'co-mowia-o-nas-klienci': 'Co mówią o nas klienci',
+        'copyright': '© 2024 ETC Software House. Wszelkie prawa zastrzeżone.',
         // Add more translations as needed
     }
 };
