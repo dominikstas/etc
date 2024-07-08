@@ -33,6 +33,8 @@ header {
     padding: 20px 0;
     text-align: center;
     position: relative;
+    display: flex;
+    justify-content: space-between;
 }
 
 header nav a {
@@ -45,6 +47,10 @@ header nav a {
 
 header nav a:hover {
     color: #f4f4f4;
+}
+
+header .container {
+    padding-top: 0px;
 }
 
 .container {
@@ -325,4 +331,16 @@ body.dark-mode #dark-mode-toggle {
 body.dark-mode #contact form input:focus,
 body.dark-mode #contact form textarea:focus {
     border-color: #f4f4f4;
+}
+
+#language-toggle {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
 }
