@@ -97,6 +97,9 @@ section h2 {
 #testimonials {
     padding: 40px 0;
     background-color: #f9f9f9;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+    animation-delay: 0.6s;
 }
 
 #testimonials h2 {
@@ -120,6 +123,8 @@ section h2 {
     transition: transform 0.3s, box-shadow 0.3s;
     position: relative;
     cursor: pointer;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
 }
 
 .testimonial-card:hover {
