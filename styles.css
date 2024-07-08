@@ -323,11 +323,6 @@ body.dark-mode #contact form textarea {
     border: 1px solid #777;
 }
 
-body.dark-mode #dark-mode-toggle {
-    background-color: #f4f4f4;
-    color: #333;
-}
-
 body.dark-mode #contact form input:focus,
 body.dark-mode #contact form textarea:focus {
     border-color: #f4f4f4;
