@@ -86,6 +86,7 @@ section {
     border-bottom: 1px solid #ccc;
     opacity: 0;
     animation: fadeIn 1s forwards;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 section h2 {
@@ -96,10 +97,11 @@ section h2 {
 
 #testimonials {
     padding: 40px 0;
-    background-color: #f9f9f9;
+    background-color: #fff;
     opacity: 0;
     animation: fadeIn 1s forwards;
     animation-delay: 0.6s;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 #testimonials h2 {
@@ -120,7 +122,7 @@ section h2 {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin: 10px;
     width: 45%;
-    transition: transform 0.3s, box-shadow 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s, color 0.3s;
     position: relative;
     cursor: pointer;
     opacity: 0;
@@ -170,7 +172,7 @@ section h2 {
     border-radius: 5px;
     margin-bottom: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s, color 0.3s;
 }
 
 .card:hover {
@@ -181,6 +183,11 @@ section h2 {
 #contact form {
     display: flex;
     flex-direction: column;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, box-shadow 0.3s;
 }
 
 #contact form input, #contact form textarea {
@@ -188,7 +195,7 @@ section h2 {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    transition: border-color 0.3s;
+    transition: border-color 0.3s, background-color 0.3s, color 0.3s;
 }
 
 #contact form input:focus, #contact form textarea:focus {
@@ -232,4 +239,82 @@ footer nav a {
 
 footer nav a:hover {
     color: #f4f4f4;
+}
+
+/* Default light mode styles */
+body.light-mode {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header.light-mode {
+    background-color: #333;
+    color: #fff;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+    background-color: #333;
+    color: #f4f4f4;
+}
+
+header.dark-mode {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+#dark-mode-toggle {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+body.dark-mode #testimonials {
+    background-color: #333;
+    color: #f4f4f4;
+}
+
+body.dark-mode .testimonial-card {
+    background-color: #444;
+    color: #f4f4f4;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode .testimonial-card:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+}
+
+body.dark-mode .card {
+    background-color: #444;
+    color: #f4f4f4;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode #contact form {
+    background-color: #444;
+    color: #f4f4f4;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode #contact form input,
+body.dark-mode #contact form textarea {
+    background-color: #555;
+    color: #f4f4f4;
+    border: 1px solid #777;
+}
+
+body.dark-mode #dark-mode-toggle {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+body.dark-mode #contact form input:focus,
+body.dark-mode #contact form textarea:focus {
+    border-color: #f4f4f4;
 }
