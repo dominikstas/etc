@@ -4,212 +4,100 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact Us</title>
-    <link
-      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet"/>
+    <link rel="stylesheet" href="styles.css" />
     <style>
-      * {
+      main {
+        margin: 20px;
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+    
+    #contact-details {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+    }
+    
+    .card {
+        flex: 1 1 30%;
         box-sizing: border-box;
-      }
-      html,
-      body {
-        min-height: 100vh;
-        padding: 0;
-        margin: 0;
-        font-family: Roboto, Arial, sans-serif;
-        font-size: 14px;
-        color: #666;
-      }
-      body {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        background: #333;
-      }
-      form {
-        position: relative;
-        width: 80%;
-        border-radius: 30px;
-        background: #444;
-        flex: 1;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 40px 0;
-      }
-      h1 {
-        margin-top: 0;
-        font-weight: 500;
-        color: #f4f4f4;
-      }
-      .form-left-decoration,
-      .form-right-decoration {
-        content: "";
-        position: absolute;
-        width: 50px;
-        height: 20px;
-        border-radius: 20px;
-        background: #333;
-      }
-      .form-left-decoration {
-        bottom: 60px;
-        left: -30px;
-      }
-      .form-right-decoration {
-        top: 60px;
-        right: -30px;
-      }
-      .form-left-decoration:before,
-      .form-left-decoration:after,
-      .form-right-decoration:before,
-      .form-right-decoration:after {
-        content: "";
-        position: absolute;
-        width: 50px;
-        height: 20px;
-        border-radius: 30px;
-        background: #444;
-      }
-      .form-left-decoration:before {
-        top: -20px;
-      }
-      .form-left-decoration:after {
-        top: 20px;
-        left: 10px;
-      }
-      .form-right-decoration:before {
-        top: -20px;
-        right: 0;
-      }
-      .form-right-decoration:after {
-        top: 20px;
-        right: 10px;
-      }
-      .circle {
-        position: absolute;
-        bottom: 80px;
-        left: -55px;
-        width: 20px;
-        height: 20px;
-        border-radius: 50%;
-        background: #444;
-      }
-      .form-inner {
-        padding: 40px;
-        background-color: #444;
+        padding: 20px;
+    }
+    
+    .map iframe {
         width: 100%;
-      }
-      .form-inner input,
-      .form-inner textarea {
-        display: block;
-        width: 100%;
-        padding: 15px;
-        margin-bottom: 10px;
-        border: black 3px solid;
-        border-radius: 20px;
-        background: #444;
-      }
-      .form-inner textarea {
-        resize: none;
-      }
-      button {
-        width: 100%;
-        padding: 10px;
+        height: 100%;
+        min-height: 450px; /* Ensures the map maintains a reasonable height */
+    }
+    
+    #contact-form {
         margin-top: 20px;
-        border-radius: 20px;
-        border: none;
-        border-bottom: 4px solid #222;
-        background: #333;
-        font-size: 16px;
-        font-weight: 400;
-        color: #fff;
-      }
-      button:hover {
-        background: #222;
-      }
-      @media (min-width: 568px) {
-        form {
-          width: 60%;
+    }
+    
+    @media (max-width: 768px) {
+        #contact-details {
+            flex-direction: column;
         }
-      }
-      footer {
-        background-color: #333;
-        color: #fff;
-        padding: 20px 0;
-        text-align: center;
-        font-size: 0.9em;
-        width: 100%;
-      }
-      footer nav a {
-        color: #fff;
-        margin: 0 10px;
-        text-decoration: none;
-        font-size: 0.9em;
-      }
-      footer nav a:hover {
-        color: #f4f4f4;
-      }
-
-      #language-toggle {
-        position: fixed;
-        top: 10px;
-        left: 10px;
-        background-color: #333;
-        color: #fff;
-        border: none;
-        padding: 10px;
-        border-radius: 5px;
-        cursor: pointer;
-      }
-      header {
-        background-color: #333;
-        color: #fff;
-        padding: 20px 0;
-        text-align: center;
-        position: relative;
-        display: flex;
-        justify-content: space-between;
-      }
-      header nav a {
-        color: #fff;
-        margin: 0 15px;
-        text-decoration: none;
-        font-weight: bold;
-        transition: color 0.3s;
-      }
-
-      header nav a:hover {
-        color: #f4f4f4;
-      }
-
-      header .container {
-        padding-top: 0px;
-      }
+    
+        .map iframe {
+            width: 100%;
+            height: 300px; /* Adjust height for smaller screens */
+        }
+    }
     </style>
   </head>
   <body>
     <header>
       <div class="container">
-        <h1 data-lang="welcome-title">ETC Software House</h1>
-        <button id="language-toggle" data-lang="language-toggle">
-          EN / PL
-        </button>
-      </div>
+          <h1 data-lang="welcome-title">ETC Software House</h1>
+          <nav>
+              <a href="#services" data-lang="services">Services</a>
+              <a href="#about" data-lang="about">About</a>
+              <a href="#contact" data-lang="contact">Contact</a>
+          </nav>
+          <button id="language-toggle" data-lang="language-toggle">EN / PL</button>
+          <button id="dark-mode-toggle" aria-label="Toggle Dark Mode" data-lang="dark-mode-toggle">
+              <img src="static/images/moon.jpg" alt="Dark Mode" class="icon moon">
+              <img src="static/images/sun.jpg" alt="Light Mode" class="icon sun">
+          </button></div>
     </header>
-    <form action="/" class="decor">
-      <div class="form-left-decoration"></div>
-      <div class="form-right-decoration"></div>
-      <div class="circle"></div>
-      <div class="form-inner">
-        <h1 data-lang="contact">Contact us</h1>
-        <input type="text" placeholder="Username" />
-        <input type="email" placeholder="Email" />
-        <textarea placeholder="Message..." rows="5"></textarea>
-        <button type="submit" data-lang="send">Send</button>
-      </div>
-    </form>
+    <main>
+      <section id="contact-details">
+        <div class="card">
+          <div class="contact-info">
+              <h2>Contact Information</h2>
+              <p>Email: <a href="mailto:info@example.com">info@example.com</a></p>
+              <p>Phone: <a href="tel:+1234567890">+1 234 567 890</a></p>
+              <p>Address: 123 Main Street, Anytown, USA</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="map">
+              <h2>Our Location</h2>
+              <iframe 
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8354345092736!2d144.95373531531667!3d-37.81720997975179!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf577d1a0d4062b0!2s123%20Main%20St%2C%20Melbourne%20VIC%203000%2C%20Australia!5e0!3m2!1sen!2sus!4v1614825486045!5m2!1sen!2sus" 
+                  width="600" 
+                  height="450" 
+                  style="border:0;" 
+                  allowfullscreen="" 
+                  loading="lazy">
+              </iframe>
+          </div>
+        </div>
+      </section>
+      <section id="contact">
+        <div class="card">
+            <h2 data-lang="contact">Contact Us</h2>
+            <form>
+                <input type="text" name="name" placeholder="Your Name" data-lang="your-name" required>
+                <input type="email" name="email" placeholder="Your Email" data-lang="your-email" required>
+                <textarea name="message" rows="5" placeholder="Your Message" data-lang="your-message" required></textarea>
+                <button type="submit" data-lang="send">Send</button>
+            </form>
+        </div>
+      </section>
+    </main>
     <footer>
       <div class="container">
         <p data-lang="copyright">
@@ -217,6 +105,8 @@
         </p>
       </div>
     </footer>
+    <script src="smoothscrolling.js"></script>
+    <script src="dlmode.js"></script>
     <script src="language-toggle.js"></script>
   </body>
 </html>
