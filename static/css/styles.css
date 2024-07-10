@@ -14,32 +14,6 @@ p, li, input, textarea, button {
     font-weight: 400;
 }
 
-#dark-mode-toggle {
-    background: none;
-    border: none;
-    padding: 0;
-    cursor: pointer;
-    position: relative;
-}
-
-#dark-mode-toggle .icon {
-    width: 2.5vw;
-    height: 5vh;
-    display: none;
-}
-
-#dark-mode-toggle .moon {
-    display: block;
-}
-
-.dark-mode .moon {
-    display: none;
-}
-
-.dark-mode .sun {
-    display: block;
-}
-
 /* Delayed fade-in for staggered effect */
 #services {
     animation-delay: 0.2s;
@@ -57,10 +31,25 @@ header {
     background-color: #1f1f1f;
     color: #fff;
     padding: 20px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+}
+
+.welcome-title {
+    margin: 0;
+    text-align: left;
+}
+
+header a{
+    text-decoration: none;
+    color: #fff;
+}
+
+header nav {
     text-align: center;
-    position: relative;
-    display: flex;
-    justify-content: space-between;
 }
 
 header nav a {
@@ -76,7 +65,18 @@ header nav a:hover {
 }
 
 header .container {
-    padding-top: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0;
+}
+
+.button-group {
+    display: flex;
+    align-items: center;
 }
 
 .container {
@@ -305,19 +305,6 @@ header.dark-mode {
     color: #1f1f1f;
 }
 
-#dark-mode-toggle {
-    position: fixed;
-    top: 10px;
-    right: 10px;
-    z-index: 999;
-    background-color: #333;
-    color: #fff;
-    border: none;
-    padding: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
 body.dark-mode #testimonials {
     background-color: #333;
     color: #f4f4f4;
@@ -357,15 +344,31 @@ body.dark-mode #contact form textarea:focus {
     border-color: #f4f4f4;
 }
 
-#language-toggle {
-    position: fixed;
-    top: 10px;
-    left: 10px;
-    z-index: 999;
-    background-color: #333;
-    color: #fff;
+#language-toggle,
+#dark-mode-toggle {
+    background: none;
     border: none;
-    padding: 10px;
-    border-radius: 5px;
+    padding: 5px;
     cursor: pointer;
+    margin-left: 10px;
+    background-color: #1f1f1f;
+    color: #fff;
+}
+
+#dark-mode-toggle .icon {
+    width: 2.5vw;
+    height: 5vh;
+    display: none;
+}
+
+#dark-mode-toggle .moon {
+    display: block;
+}
+
+.dark-mode .moon {
+    display: none;
+}
+
+.dark-mode .sun {
+    display: block;
 }
