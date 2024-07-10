@@ -6,40 +6,126 @@
     <title>FAQ</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet"/>
     <link rel="stylesheet" href="../static/css/styles.css"/>
-    </head>
-
-    <body>
-        <header>
-          <div class="container">
-              <h1 data-lang="welcome-title">ETC Software House</h1>
-              <nav>
-                  <a href="#services" data-lang="services">Services</a>
-                  <a href="#about" data-lang="about">About</a>
-                  <a href="#contact" data-lang="contact">Contact</a>
-              </nav>
-              <button id="language-toggle" data-lang="language-toggle">EN / PL</button>
-              <button id="dark-mode-toggle" aria-label="Toggle Dark Mode" data-lang="dark-mode-toggle">
-                  <img src="../static/images/moon.jpg" alt="Dark Mode" class="icon moon">
-                  <img src="../static/images/sun.jpg" alt="Light Mode" class="icon sun">
-              </button></div>
-        </header>
-        <main>
-            <section id="contact">
-            <div class="card">
-                <h2>Frequently Asked Questions</h2>
-                </div>
-                </section>
-        </main>
-        <footer>
-          <div class="container">
-            <p data-lang="copyright">
-              © 2024 ETC Software House. All rights reserved.
-            </p>
+    <style>
+      body {
+        font-family: 'Roboto', sans-serif;
+        background-color: #f4f7fa;
+        color: #333;
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+  
+      h1, h2 {
+        text-align: center;
+      }
+      .faq-section {
+        background: #fff;
+        border-radius: 8px;
+        padding: 20px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        margin-top: 20px;
+      }
+      .faq-question {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        margin-bottom: 10px;
+        cursor: pointer;
+      }
+      .faq-answer {
+        display: none;
+        padding: 0 15px 15px;
+        border-bottom: 1px solid #ddd;
+        border-left: 1px solid #ddd;
+        border-right: 1px solid #ddd;
+      }
+      .faq-question:hover {
+        background: #f9f9f9;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1 data-lang="welcome-title">ETC Software House</h1>
+        <nav>
+          <a href="#services" data-lang="services">Services</a>
+          <a href="#about" data-lang="about">About</a>
+          <a href="#contact" data-lang="contact">Contact</a>
+        </nav>
+        <button id="language-toggle" data-lang="language-toggle">EN / PL</button>
+        <button id="dark-mode-toggle" aria-label="Toggle Dark Mode" data-lang="dark-mode-toggle">
+          <img src="../static/images/moon.jpg" alt="Dark Mode" class="icon moon">
+          <img src="../static/images/sun.jpg" alt="Light Mode" class="icon sun">
+        </button>
+      </div>
+    </header>
+    <main>
+      <div class="container">
+        <section id="faq" class="faq-section">
+          <h2>Frequently Asked Questions</h2>
+          <div class="faq-question">
+            <span>What makes you unique among other software companies?</span>
+            <span>+</span>
           </div>
-        </footer>
-        <script src="../scripts/smoothscrolling.js"></script>
-        <script src="../scripts/dlmode.js"></script>
-        <script src="../scripts/language-toggle.js"></script>
-      </body>
-    </html>
-    
+          <div class="faq-answer">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.</p>
+          </div>
+          <div class="faq-question">
+            <span>What are the costs of customized software development?</span>
+            <span>+</span>
+          </div>
+          <div class="faq-answer">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.</p>
+          </div>
+          <div class="faq-question">
+            <span>What you can do for me?</span>
+            <span>+</span>
+          </div>
+          <div class="faq-answer">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.</p>
+          </div>
+          <div class="faq-question">
+            <span>What technologies do you use?</span>
+            <span>+</span>
+          </div>
+          <div class="faq-answer">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.</p>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer>
+      <div class="container">
+        <p data-lang="copyright">
+          © 2024 ETC Software House. All rights reserved.
+        </p>
+      </div>
+    </footer>
+    <script>
+      document.querySelectorAll('.faq-question').forEach(question => {
+        question.addEventListener('click', () => {
+          const answer = question.nextElementSibling;
+          const isVisible = answer.style.display === 'block';
+          document.querySelectorAll('.faq-answer').forEach(a => a.style.display = 'none');
+          document.querySelectorAll('.faq-question span:last-child').forEach(span => span.textContent = '+');
+          if (!isVisible) {
+            answer.style.display = 'block';
+            question.querySelector('span:last-child').textContent = '−';
+          }
+        });
+      });
+    </script>
+    <script src="../scripts/smoothscrolling.js"></script>
+    <script src="../scripts/dlmode.js"></script>
+    <script src="../scripts/language-toggle.js"></script>
+  </body>
+</html>
