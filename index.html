@@ -13,18 +13,26 @@
 <header>
     <div class="container">
         <a href="index.html"><h1 data-lang="welcome-title">ETC Software House</h1></a>
-        <nav>
-            <a href="#services" data-lang="services">Services</a>
-            <a href="#about" data-lang="about">About</a>
-            <a href="#contact" data-lang="contact">Contact</a>
-        </nav>
-        <div class="button-group">
-            <button id="language-toggle" data-lang="language-toggle">EN / PL</button>
-            <button id="dark-mode-toggle" aria-label="Toggle Dark Mode" data-lang="dark-mode-toggle">
-                <img src="static/images/moon.jpg" alt="Dark Mode" class="icon moon">
-                <img src="static/images/sun.jpg" alt="Light Mode" class="icon sun">
-            </button>
+        <button class="hamburger" id="hamburger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div class="menu-items" id="menu-items">
+            <nav>
+                <a href="#services" data-lang="services">Services</a>
+                <a href="#about" data-lang="about">About</a>
+                <a href="#contact" data-lang="contact">Contact</a>
+            </nav>
+            <div class="button-group">
+                <button id="language-toggle" data-lang="language-toggle">EN / PL</button>
+                <button id="dark-mode-toggle" aria-label="Toggle Dark Mode" data-lang="dark-mode-toggle">
+                    <img src="static/images/moon.jpg" alt="Dark Mode" class="icon moon">
+                    <img src="static/images/sun.jpg" alt="Light Mode" class="icon sun">
+                </button>
+            </div>
         </div>
+    </div>
 </header>
 
 <div class="hero">
@@ -103,5 +111,6 @@
 <script src="scripts/smoothscrolling.js"></script>
 <script src="scripts/dlmode.js"></script>
 <script src="scripts/language-toggle.js"></script>
+<script src="scripts/hamburger.js"></script>
 </body>
 </html>
