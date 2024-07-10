@@ -80,7 +80,8 @@ header .container {
 }
 
 .container {
-    width: 80%;
+    width: 90%; 
+    max-width: 1200px; 
     margin: auto;
     overflow: hidden;
     padding: 20px;
@@ -193,6 +194,7 @@ section h2 {
     .testimonial-card {
         width: 100%;
     }
+    
 }
 
 @keyframes fadeIn {
@@ -257,10 +259,9 @@ section h2 {
 
 @media (max-width: 768px) {
     .container {
-        width: 100%;
-        padding: 0 10px;
-    }
-}
+        width: 95%;
+        padding: 10px;
+}}
 
 footer {
     background-color: #333;
