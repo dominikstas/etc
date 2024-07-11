@@ -3,7 +3,7 @@ const translations = {
     'en': {
         'welcome-title': 'ETC',
         'welcome-text': 'Your Engineering Business is your craft.',
-        'welcome-text2': 'Tailored software is our.',
+        'welcome-text2': 'Tailored software is ours.',
         'services': 'Our Services',
         'about': 'Engineering, Craft, Technologies',
         'testimonials': 'What Our Clients Say',
