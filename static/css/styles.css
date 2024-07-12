@@ -209,6 +209,70 @@ section h2 {
     color: #FFD700; /* Gold color for stars */
 }
 
+#features {
+    padding: 40px 0;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+    animation-delay: 0.8s;
+}
+
+#features h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 900px; /* Możesz dostosować tę wartość */
+    margin: 0 auto;
+}
+
+.feature-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    aspect-ratio: 1 / 1; /* Zapewnia kwadratowy kształt */
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.feature-card h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 1em;
+}
+
+.feature-card p {
+    margin: 0;
+    color: #666;
+    font-size: 0.8em;
+}
+
+body.dark-mode .feature-card {
+    background-color: #444;
+    color: #f4f4f4;
+}
+
+body.dark-mode .feature-card h3 {
+    color: #f4f4f4;
+}
+
+body.dark-mode .feature-card p {
+    color: #ccc;
+}
+
 @media (max-width: 768px) {
     .testimonial-card {
         width: 100%;
@@ -447,5 +511,27 @@ body.dark-mode #contact form textarea:focus {
 
     .nav-menu.active {
     left: -8%;
+    }
+    .features-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+    }
+
+    .feature-card h3 {
+        font-size: 0.8em;
+    }
+
+    .feature-card p {
+        font-size: 0.7em;
+    }
+}
+
+@media (max-width: 480px) {
+    .feature-card h3 {
+        font-size: 0.7em;
+    }
+
+    .feature-card p {
+        font-size: 0.6em;
     }
 }
