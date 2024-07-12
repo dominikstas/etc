@@ -4,7 +4,7 @@ const translations = {
         'welcome-title': 'ETC',
         'welcome-text': 'Your Engineering Business is your craft.',
         'welcome-text2': 'Tailored software is ours.',
-        'services': 'Our Services',
+        'services': 'Web development',
         'about': 'Engineering, Craft, Technologies',
         'testimonials': 'What Our Clients Say',
         'contact': 'Ready to Transform Your Online Presence?',
@@ -20,8 +20,8 @@ const translations = {
         'your-email': 'Your Email',
         'your-message': 'Your Message',
         // to be bold
-        'services-description': 'At ETC, we offer a wide range of software development services including:',
-        'about-description': 'At ETC, we understand that as an engineer, your expertise lies in creating, building, and innovating within your field. Our mission is to help you stand out in your niche by providing top-tier software services designed specifically for professionals like you. Whether you’re in construction, aviation, civil engineering, or any other mechanical field, we’ve got you covered with our comprehensive suite of solutions.',
+        'services-description': "At ETC, we make cutting-edge websites that elevate your professional image in today's digital landscape. Our expertise lies in creating simple, functional online platforms that showcase your brand's unique value and help you stand out. That includes:",
+        'about-description': 'We understand that as an engineer, your expertise lies in creating, building, and innovating within your field. Our mission is to help you stand out in your niche by providing top-tier software services designed specifically for professionals like you. Whether you’re in construction, aviation, civil engineering, or any other mechanical field, we’ve got you covered with our comprehensive suite of solutions.',
         'contact-description': '', // Add translation if needed
         'co-mowia-o-nas-klienci': 'What Our Clients Say',
         'copyright': '© 2024 ETC Software House. All rights reserved.',
