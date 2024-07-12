@@ -9,20 +9,41 @@
     </head>
 
     <body>
-        <header>
-          <div class="container">
-              <h1 data-lang="welcome-title">ETC Software House</h1>
-              <nav>
-                  <a href="#services" data-lang="services">Services</a>
-                  <a href="#about" data-lang="about">About</a>
-                  <a href="#contact" data-lang="contact">Contact</a>
-              </nav>
-              <button id="language-toggle" data-lang="language-toggle">EN / PL</button>
-              <button id="dark-mode-toggle" aria-label="Toggle Dark Mode" data-lang="dark-mode-toggle">
-                  <img src="../static/images/moon.jpg" alt="Dark Mode" class="icon moon">
-                  <img src="../static/images/sun.jpg" alt="Light Mode" class="icon sun">
-              </button></div>
-        </header>
+      <header>
+        <nav class="navbar">
+            <a href="../index.html" class="nav-branding">
+                <h1 class="welcome-title" data-lang="welcome-title">ETC Software House</h1>
+            </a>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                <a href="../html/services.html" data-lang="services" class="nav-link">Services</a>
+                </li>
+                <li class="nav-item">
+                <a href="../html/about.html" data-lang="about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                <a href="../html/contact.html" data-lang="contact" class="nav-link">Contact</a>
+                </li>
+                <li class="nav-item">
+                <a href="../html/faq.html" class="nav-link">FAQ</a>
+                </li>
+                <li class="nav-item">
+                <button id="language-toggle" data-lang="language-toggle">EN / PL</button>
+                </li>
+                <li class="nav-item">
+                <button id="dark-mode-toggle" aria-label="Toggle Dark Mode" data-lang="dark-mode-toggle">
+                    <img src="../static/images/moon.jpg" alt="Dark Mode" class="icon moon">
+                    <img src="../static/images/sun.jpg" alt="Light Mode" class="icon sun">
+                </button>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
         <main>
             <section id="contact">
             <div class="card">
@@ -37,7 +58,6 @@
             </p>
           </div>
         </footer>
-        <script src="../scripts/smoothscrolling.js"></script>
         <script src="../scripts/dlmode.js"></script>
         <script src="../scripts/language-toggle.js"></script>
         <script src="../scripts/hamburger.js"></script>
