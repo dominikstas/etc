@@ -438,6 +438,7 @@ body.dark-mode #contact form textarea:focus {
     text-align: center;
     justify-content: center;
     transition: 0.3s;
+    z-index: 999;
     }
 
     .nav-item {
