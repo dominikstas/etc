@@ -433,9 +433,10 @@ body.dark-mode #contact form textarea:focus {
     top: 70px;
     gap: 0;
     flex-direction: column;
-    background-color: #262626;
+    background-color: #1f1f1f;
     width: 100%;
     text-align: center;
+    justify-content: center;
     transition: 0.3s;
     }
 
@@ -444,6 +445,6 @@ body.dark-mode #contact form textarea:focus {
     }
 
     .nav-menu.active {
-    left: 0;
+    left: -8%;
     }
 }
