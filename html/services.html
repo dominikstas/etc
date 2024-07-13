@@ -1,68 +1,201 @@
 <!DOCTYPE html>
-<html>
-  <head>
+<html lang="en">
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Our services</title>
+    <title>Our Services - ETC Software House</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet"/>
     <link rel="stylesheet" href="../static/css/styles.css"/>
-    </head>
+    <style>
+      .tech-stack {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        margin-top: 20px;
+    }
+    .tech-item {
+        text-align: center;
+        padding: 20px;
+        background-color: #f8f8f8;
+        border-radius: 10px;
+        transition: transform 0.3s ease;
+    }
+    .tech-item:hover {
+        transform: translateY(-5px);
+    }
+    .tech-icon {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 10px;
+    }
+    .tech-item h3 {
+        margin-bottom: 10px;
+    }
+    .tech-item p {
+        font-size: 0.9em;
+        color: #666;
+    }
+        .process-steps {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .process-step {
+            flex-basis: calc(20% - 20px);
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .process-step h3 {
+            margin-top: 10px;
+        }
+        @media (max-width: 768px) {
+            .process-step {
+                flex-basis: calc(50% - 20px);
+            }
+        }
+    </style>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+        <a href="index.html" class="nav-branding">
+            <h1 class="welcome-title" data-lang="welcome-title">ETC Software House</h1>
+        </a>
+        <ul class="nav-menu">
+            <li class="nav-item">
+            <a href="html/services.html" data-lang="services" class="nav-link">Services</a>
+            </li>
+            <li class="nav-item">
+            <a href="html/about.html" data-lang="about" class="nav-link">About</a>
+            </li>
+            <li class="nav-item">
+            <a href="html/contact.html" data-lang="contact" class="nav-link">Contact</a>
+            </li>
+            <li class="nav-item">
+            <a href="html/faq.html" class="nav-link">FAQ</a>
+            </li>
+            <li class="nav-item">
+            <button id="language-toggle" data-lang="language-toggle">EN / PL</button>
+            </li>
+            <li class="nav-item">
+            <button id="dark-mode-toggle" aria-label="Toggle Dark Mode" data-lang="dark-mode-toggle">
+                <img src="static/images/moon.jpg" alt="Dark Mode" class="icon moon">
+                <img src="static/images/sun.jpg" alt="Light Mode" class="icon sun">
+            </button>
+            </li>
+        </ul>
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+</header>
 
-    <body>
-        <header>
-          <header>
-            <nav class="navbar">
-                <a href="../index.html" class="nav-branding">
-                    <h1 class="welcome-title" data-lang="welcome-title">ETC Software House</h1>
-                </a>
-                <ul class="nav-menu">
-                    <li class="nav-item">
-                    <a href="../html/services.html" data-lang="services" class="nav-link">Services</a>
-                    </li>
-                    <li class="nav-item">
-                    <a href="../html/about.html" data-lang="about" class="nav-link">About</a>
-                    </li>
-                    <li class="nav-item">
-                    <a href="../html/contact.html" data-lang="contact" class="nav-link">Contact</a>
-                    </li>
-                    <li class="nav-item">
-                    <a href="../html/faq.html" class="nav-link">FAQ</a>
-                    </li>
-                    <li class="nav-item">
-                    <button id="language-toggle" data-lang="language-toggle">EN / PL</button>
-                    </li>
-                    <li class="nav-item">
-                    <button id="dark-mode-toggle" aria-label="Toggle Dark Mode" data-lang="dark-mode-toggle">
-                        <img src="../static/images/moon.jpg" alt="Dark Mode" class="icon moon">
-                        <img src="../static/images/sun.jpg" alt="Light Mode" class="icon sun">
-                    </button>
-                    </li>
-                </ul>
-                <div class="hamburger">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </div>
-            </nav>
-        </header>
-        <main>
-            <section id="contact">
-            <div class="card">
-                <!--placeholder text-->
-                <h2>Our services</h2>
-                </div>
-                </section>
-        </main>
-        <footer>
+    <main>
+        <section id="services-hero" class="hero">
+            <div class="container">
+                <h1>Our Services</h1>
+                <p>Empowering your digital presence with cutting-edge solutions</p>
+            </div>
+        </section>
+
+        <section id="technology-stack">
           <div class="container">
-            <p data-lang="copyright">
-              © 2024 ETC Software House. All rights reserved.
-            </p>
+              <h2>Technology Stack</h2>
+              <p>We use the latest technologies to build robust and scalable web applications:</p>
+              <div class="tech-stack">
+                  <div class="tech-item">
+                      <img src="../static/images/js-icon.png" alt="JavaScript" class="tech-icon">
+                      <h3>JavaScript</h3>
+                      <p>A versatile programming language for creating dynamic, interactive web content. We use it to enhance user experience, resulting in more engaging and responsive websites.</p>
+                  </div>
+                  <div class="tech-item">
+                      <img src="../static/images/html-icon.png" alt="HTML" class="tech-icon">
+                      <h3>HTML</h3>
+                      <p>The standard markup language for creating web pages. We use it to structure content, ensuring proper organization and accessibility of your website.</p>
+                  </div>
+                  <div class="tech-item">
+                      <img src="../static/images/css-icon.png" alt="CSS" class="tech-icon">
+                      <h3>CSS</h3>
+                      <p>A styling language that controls the visual presentation of web pages. We use it to create attractive, consistent designs that adapt to different screen sizes.</p>
+                  </div>
+                  <div class="tech-item">
+                      <img src="../static/images/django-icon.png" alt="Django" class="tech-icon">
+                      <h3>Django</h3>
+                      <p>A high-level Python web framework that enables rapid development and clean, pragmatic design. We use it to build secure, scalable web applications efficiently.</p>
+                  </div>
+                  <div class="tech-item">
+                      <img src="../static/images/flask-icon.png" alt="Flask" class="tech-icon">
+                      <h3>Flask</h3>
+                      <p>A lightweight Python web framework. We use it for creating flexible, custom web applications, allowing us to tailor solutions to your specific needs.</p>
+                  </div>
+                  <div class="tech-item">
+                      <img src="../static/images/mysql-icon.png" alt="MySQL" class="tech-icon">
+                      <h3>MySQL</h3>
+                      <p>A popular open-source relational database management system. We use it to store and manage your data efficiently, ensuring fast access and data integrity.</p>
+                  </div>
+              </div>
           </div>
-        </footer>
-        <script src="../scripts/dlmode.js"></script>
-        <script src="../scripts/language-toggle.js"></script>
-        <script src="../scripts/hamburger.js"></script>
-      </body>
-    </html>
-    
+      </section>
+
+        <section id="web-development-process">
+            <div class="container">
+                <h2>How We Create Websites and Why They Matter</h2>
+                <p>Our comprehensive web development process ensures that your website meets your business needs and stands out in the digital landscape:</p>
+                <div class="process-steps">
+                    <div class="process-step">
+                        <img src="../static/images/analysis-icon.png" alt="Analysis">
+                        <h3>1. Needs Analysis</h3>
+                        <p>We analyze your company's needs and goals</p>
+                    </div>
+                    <div class="process-step">
+                        <img src="../static/images/design-icon.png" alt="Design">
+                        <h3>2. Design</h3>
+                        <p>We create a unique and engaging design</p>
+                    </div>
+                    <div class="process-step">
+                        <img src="../static/images/programming-icon.png" alt="Programming">
+                        <h3>3. Programming</h3>
+                        <p>We develop your website using cutting-edge technologies</p>
+                    </div>
+                    <div class="process-step">
+                        <img src="../static/images/refinement-icon.png" alt="Refinement">
+                        <h3>4. Continuous Refinement</h3>
+                        <p>We make ongoing improvements until everything works perfectly</p>
+                    </div>
+                    <div class="process-step">
+                        <img src="../static/images/marketing-icon.png" alt="Marketing">
+                        <h3>5. Marketing Aspects</h3>
+                        <p>We implement SEO, ensure security, and optimize performance</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="container">
+                <h2>Contact Us</h2>
+                <p>Ready to start your web development journey? Get in touch with us today!</p>
+                <form>
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" placeholder="Your Message" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2024 ETC Software House. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../scripts/dlmode.js"></script>
+    <script src="../scripts/language-toggle.js"></script>
+    <script src="../scripts/hamburger.js"></script>
+</body>
+</html>

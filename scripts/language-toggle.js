@@ -2,8 +2,8 @@
 const translations = {
     'en': {
         'welcome-title': 'ETC',
-        'welcome-text': 'Your Engineering Business is your craft.',
-        'welcome-text2': 'Tailored software is ours.',
+        'welcome-text': 'Your Engineering Business is your craft',
+        'welcome-text2': 'Tailored software is ours',
         'services': 'Web development',
         'about': 'Engineering, Craft, Technologies',
         'testimonials': 'What Our Clients Say',
@@ -29,8 +29,8 @@ const translations = {
     },
     'pl': {
         'welcome-title': 'ETC',
-        'welcome-text': 'Ty znasz się na swoim biznesie.',
-        'welcome-text2': 'My na komputerach.',
+        'welcome-text': 'Ty znasz się na swoim biznesie',
+        'welcome-text2': 'My na komputerach',
         'services': 'Nasze Usługi',
         'about': 'O Nas',
         'testimonials': 'Co mówią o nas klienci',
