@@ -535,3 +535,8 @@ body.dark-mode #contact form textarea:focus {
         font-size: 0.6em;
     }
 }
+@media (max-width: 768px) {
+    .features-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+}
