@@ -13,7 +13,11 @@
         color: #333;
         margin: 0;
         padding: 0;
-        padding-top: 90px;
+      }
+      @media (max-width: 768px) {
+        body {
+          padding-top: 90px;
+        }
       }
       .container {
         max-width: 800px;
@@ -35,21 +39,31 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 15px;
+        padding: 1em 0.75em;
         border: 1px solid #ddd;
         border-radius: 8px;
         margin-bottom: 10px;
         cursor: pointer;
       }
       .faq-answer {
-        display: none;
-        padding: 0 15px 15px;
-        border-bottom: 1px solid #ddd;
-        border-left: 1px solid #ddd;
-        border-right: 1px solid #ddd;
+        height: 0;
+        overflow: hidden;
+        transition: height 0.3s ease-out, padding 0.3s ease-out;
+        padding: 0 0.75em;
+      }
+      .faq-answer.open {
+        padding: 1em 0.75em;
+      }
+      .faq-question span:last-child {
+        display: inline-block;
+        transition: transform 0.3s ease;
+      }
+    
+      .faq-question.open span:last-child {
+          transform: rotate(45deg);
       }
       .faq-question:hover {
-        background: #f9f9f9;
+        background: #838383;
       }
       .card:hover{
         transform: none;
@@ -150,17 +164,22 @@
       </div>
   </footer>
     <script>
-      document.querySelectorAll('.faq-question').forEach(question => {
-        question.addEventListener('click', () => {
-          const answer = question.nextElementSibling;
-          const isVisible = answer.style.display === 'block';
-          document.querySelectorAll('.faq-answer').forEach(a => a.style.display = 'none');
-          document.querySelectorAll('.faq-question span:last-child').forEach(span => span.textContent = '+');
-          if (!isVisible) {
-            answer.style.display = 'block';
-            question.querySelector('span:last-child').textContent = '−';
-          }
-        });
+      document.addEventListener("DOMContentLoaded", function() {
+        const faqQuestions = document.querySelectorAll(".faq-question");
+    
+        faqQuestions.forEach(question => {
+            question.addEventListener("click", function() {
+                const answer = this.nextElementSibling;
+                if (!answer.style.height || answer.style.height === '0px') {
+                    answer.style.height = answer.scrollHeight + 'px';
+                    answer.classList.add("open");
+                } else {
+                    answer.style.height = '0';
+                    answer.classList.remove("open");
+                }
+                this.classList.toggle("open");
+              });
+          });
       });
     </script>
     <script src="../scripts/dlmode.js"></script>
