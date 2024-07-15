@@ -60,23 +60,23 @@
   <header>
     <nav class="navbar">
         <a href="../index.html" class="nav-branding">
-            <h1 class="welcome-title" data-lang="welcome-title">ETC Software House</h1>
+            <h1 class="welcome-title" data-lang="welcome-title" data-en="ETC" data-pl="ETC">ETC Software House</h1>
         </a>
         <ul class="nav-menu">
             <li class="nav-item">
-            <a href="services.html" data-lang="services" class="nav-link">Services</a>
+            <a href="services.html" data-lang="services" data-en="Services" data-pl="Usługi" class="nav-link">Services</a>
             </li>
             <li class="nav-item">
-            <a href="about.html" data-lang="about" class="nav-link">About</a>
+            <a href="about.html" data-lang="about" data-en="About" data-pl="O nas" class="nav-link">About</a>
             </li>
             <li class="nav-item">
-            <a href="contact.html" data-lang="contact" class="nav-link">Contact</a>
+            <a href="contact.html" data-lang="contact" data-en="Contact" data-pl="Kontakt" class="nav-link">Contact</a>
             </li>
             <li class="nav-item">
             <a href="faq.html" class="nav-link">FAQ</a>
             </li>
             <li class="nav-item">
-            <button id="language-toggle" data-lang="language-toggle">EN / PL</button>
+            <button id="language-toggle" data-lang="language-toggle" data-en="EN / PL" data-pl="PL / EN">EN / PL</button>
             </li>
             <li class="nav-item">
             <button id="dark-mode-toggle" aria-label="Toggle Dark Mode" data-lang="dark-mode-toggle">
@@ -96,45 +96,60 @@
     <main>
         <section id="services-hero" class="hero">
             <div class="container">
-                <h1>Our Services</h1>
-                <p>Empowering your digital presence with cutting-edge solutions</p>
+                <h1 data-lang="services-title" data-en="Our Services" data-pl="Nasze usługi">Our Services</h1>
+                <p data-lang="empowering-digital" data-en="Empowering your digital presence with cutting-edge solutions" data-pl="Wzmacniają Twoją obecność cyfrową dzięki najnowocześniejszym rozwiązaniom">
+                    Empowering your digital presence with cutting-edge solutions</p>
             </div>
         </section>
 
         <section id="technology-stack">
           <div class="container">
-              <h2>Technology Stack</h2>
-              <p>We use the latest technologies to build robust and scalable web applications:</p>
+              <h2 data-lang="technology-stack" data-en="Technology Stack" data-pl="Stos technologii">Technology Stack</h2>
+              <p data-lang="we-use-the-latest-technologies" data-en="We use the latest technologies to build robust and scalable web applications:" 
+              data-pl="Do budowy solidnych i skalowalnych aplikacji webowych wykorzystujemy najnowsze technologie:">
+                We use the latest technologies to build robust and scalable web applications:</p>
               <div class="tech-stack">
-                  <div class="tech-item">
+                  <div class="tech-item card">
                       <img src="../static/images/js-icon.png" alt="JavaScript" class="tech-icon">
                       <h3>JavaScript</h3>
-                      <p>A versatile programming language for creating dynamic, interactive web content. We use it to enhance user experience, resulting in more engaging and responsive websites.</p>
+                      <p data-lang="javascript" data-en="A versatile programming language for creating dynamic, interactive web content. We use it to enhance user experience, resulting in more engaging and responsive websites." 
+                      data-pl="Wszechstronny język programowania do tworzenia dynamicznych, interaktywnych treści internetowych. Używamy ich, aby poprawić doświadczenie użytkownika, dzięki czemu strony internetowe są bardziej angażujące i responsywne.">
+                        A versatile programming language for creating dynamic, interactive web content. We use it to enhance user experience, resulting in more engaging and responsive websites.</p>
                   </div>
-                  <div class="tech-item">
+                  <div class="tech-item card">
                       <img src="../static/images/html-icon.png" alt="HTML" class="tech-icon">
                       <h3>HTML</h3>
-                      <p>The standard markup language for creating web pages. We use it to structure content, ensuring proper organization and accessibility of your website.</p>
+                      <p data-lang="html" data-en="The standard markup language for creating web pages. We use it to structure content, ensuring proper organization and accessibility of your website."
+                      data-pl="Standardowy język do tworzenia stron internetowych. Wykorzystujemy go do uporządkowania treści, zapewnienia właściwej organizacji i dostępności Twojej witryny.">
+                        The standard markup language for creating web pages. We use it to structure content, ensuring proper organization and accessibility of your website.</p>
                   </div>
-                  <div class="tech-item">
+                  <div class="tech-item card">
                       <img src="../static/images/css-icon.png" alt="CSS" class="tech-icon">
                       <h3>CSS</h3>
-                      <p>A styling language that controls the visual presentation of web pages. We use it to create attractive, consistent designs that adapt to different screen sizes.</p>
+                      <p data-lang="css" data-en="A styling language that controls the visual presentation of web pages. We use it to create attractive, consistent designs that adapt to different screen sizes."
+                      data-pl="Język stylizacji, który kontroluje wizualną prezentację stron internetowych. Wykorzystujemy go do tworzenia atrakcyjnych, spójnych projektów, które dostosowują się do różnych rozmiarów ekranów.">
+                        A styling language that controls the visual presentation of web pages. We use it to create attractive, consistent designs that adapt to different screen sizes.</p>
                   </div>
-                  <div class="tech-item">
+                  <div class="tech-item card">
                       <img src="../static/images/django-icon.png" alt="Django" class="tech-icon">
                       <h3>Django</h3>
-                      <p>A high-level Python web framework that enables rapid development and clean, pragmatic design. We use it to build secure, scalable web applications efficiently.</p>
+                      <p data-lang="django" data-en="A high-level Python web framework that enables rapid development and clean, pragmatic design. We use it to build secure, scalable web applications efficiently."
+                      data-pl="Wysokopoziomowa platforma internetowa w języku Python, która umożliwia szybki rozwój i przejrzysty, pragmatyczny projekt. Używamy go do wydajnego budowania bezpiecznych, skalowalnych aplikacji internetowych.">
+                        A high-level Python web framework that enables rapid development and clean, pragmatic design. We use it to build secure, scalable web applications efficiently.</p>
                   </div>
-                  <div class="tech-item">
+                  <div class="tech-item card">
                       <img src="../static/images/flask-icon.png" alt="Flask" class="tech-icon">
                       <h3>Flask</h3>
-                      <p>A lightweight Python web framework. We use it for creating flexible, custom web applications, allowing us to tailor solutions to your specific needs.</p>
+                      <p data-lang="flask" data-en="A lightweight Python web framework. We use it for creating flexible, custom web applications, allowing us to tailor solutions to your specific needs."
+                      data-pl="Lekki framework sieciowy w języku Python. Wykorzystujemy go do tworzenia elastycznych, niestandardowych aplikacji internetowych, co pozwala nam dostosować rozwiązania do Twoich konkretnych potrzeb.">
+                        A lightweight Python web framework. We use it for creating flexible, custom web applications, allowing us to tailor solutions to your specific needs.</p>
                   </div>
-                  <div class="tech-item">
+                  <div class="tech-item card">
                       <img src="../static/images/mysql-icon.png" alt="MySQL" class="tech-icon">
                       <h3>MySQL</h3>
-                      <p>A popular open-source relational database management system. We use it to store and manage your data efficiently, ensuring fast access and data integrity.</p>
+                      <p data-lang="mysql" data-en="A popular open-source relational database management system. We use it to store and manage your data efficiently, ensuring fast access and data integrity."
+                      data-pl="Popularny system zarządzania relacyjnymi bazami danych typu open source. Wykorzystujemy je do sprawnego przechowywania i zarządzania Twoimi danymi, zapewniając szybki dostęp i integralność danych.">
+                        A popular open-source relational database management system. We use it to store and manage your data efficiently, ensuring fast access and data integrity.</p>
                   </div>
               </div>
           </div>
@@ -142,47 +157,54 @@
 
         <section id="web-development-process">
             <div class="container">
-                <h2>How We Create Websites and Why They Matter</h2>
-                <p>Our comprehensive web development process ensures that your website meets your business needs and stands out in the digital landscape:</p>
+                <h2 data-lang="how-we-create" data-en="How We Create Websites and Why They Matter" data-pl="Jak tworzymy strony internetowe i dlaczego są one ważne">
+                    How We Create Websites and Why They Matter</h2>
+                <p data-lang="our-comprehensive-web" data-en="Our comprehensive web development process ensures that your website meets your business needs and stands out in the digital landscape:"
+                data-pl="Nasz kompleksowy proces tworzenia stron internetowych gwarantuje, że Twoja witryna spełni Twoje potrzeby biznesowe i wyróżni się w cyfrowym krajobrazie:">
+                    Our comprehensive web development process ensures that your website meets your business needs and stands out in the digital landscape:</p>
                 <div class="process-steps">
                     <div class="process-step">
                         <img src="../static/images/analysis-icon.png" alt="Analysis">
-                        <h3>1. Needs Analysis</h3>
-                        <p>We analyze your company's needs and goals</p>
+                        <h3 data-lang="needs-analysis" data-en="Needs Analysis" data-pl="Analiza potrzeb">1. Needs Analysis</h3>
+                        <p data-lang="we-analyze-your-company" data-en="We analyze your company's needs and goals" 
+                        data-pl="Analizujemy potrzeby i cele Twojej firmy">We analyze your company's needs and goals</p>
                     </div>
                     <div class="process-step">
                         <img src="../static/images/design-icon.png" alt="Design">
-                        <h3>2. Design</h3>
-                        <p>We create a unique and engaging design</p>
+                        <h3 data-lang="design" data-en="2. Design" data-pl="2. Projektowanie">2. Design</h3>
+                        <p data-lang="unique-and-engaging-design" data-en="We create a unique and engaging design" 
+                        data-pl="Tworzymy niepowtarzalny i angażujący projekt">We create a unique and engaging design</p>
                     </div>
                     <div class="process-step">
                         <img src="../static/images/programming-icon.png" alt="Programming">
-                        <h3>3. Programming</h3>
-                        <p>We develop your website using cutting-edge technologies</p>
+                        <h3 data-lang="programming" data-en="3. Programming" data-pl="3. Programowanie">3. Programming</h3>
+                        <p data-lang="we-develop-website" data-en="We develop your website using cutting-edge technologies"
+                        data-pl="Tworzymy Twoją stronę internetową z wykorzystaniem najnowocześniejszych technologii">We develop your website using cutting-edge technologies</p>
                     </div>
                     <div class="process-step">
                         <img src="../static/images/refinement-icon.png" alt="Refinement">
-                        <h3>4. Continuous Refinement</h3>
-                        <p>We make ongoing improvements until everything works perfectly</p>
+                        <h3 data-lang="continuous-refinement" data-en="4. Continuous Refinement" data-pl="4. Ciągłe udoskonalanie">4. Continuous Refinement</h3>
+                        <p data-lang="we-make-ongoing-improvements" data-en="We make ongoing improvements until everything works perfectly"
+                        data-pl="Wprowadzamy ciągłe ulepszenia, aż wszystko działa idealnie">We make ongoing improvements until everything works perfectly</p>
                     </div>
                     <div class="process-step">
                         <img src="../static/images/marketing-icon.png" alt="Marketing">
-                        <h3>5. Marketing Aspects</h3>
-                        <p>We implement SEO, ensure security, and optimize performance</p>
+                        <h3 data-lang="marketing" data-en="5. Marketing Aspects" data-pl="5. Aspekty marketingu">>5. Marketing Aspects</h3>
+                        <p data-lang="we-implement-seo-ensure-security-and-optimize" data-en="We implement SEO, ensure security, and optimize performance"
+                        data-pl="Wdrażamy SEO, zapewniamy bezpieczeństwo i optymalizujemy wydajność">We implement SEO, ensure security, and optimize performance</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <section id="contact">
-            <div class="container">
-                <h2>Contact Us</h2>
-                <p>Ready to start your web development journey? Get in touch with us today!</p>
-                <form>
-                    <input type="text" name="name" placeholder="Your Name" required>
-                    <input type="email" name="email" placeholder="Your Email" required>
-                    <textarea name="message" placeholder="Your Message" required></textarea>
-                    <button type="submit">Send Message</button>
+            <div class="card">
+                <h2 data-lang="contact" data-en="Contact Us" data-pl="Kontakt">Contact Us</h2>
+                <form netlify>
+                    <input type="text" name="name" placeholder="Your Name" data-lang="your-name" data-en="Your Name" data-pl="Twoje imię" required>
+                    <input type="email" name="email" placeholder="Your Email" data-lang="your-email" data-en="Your Email" data-pl="Twój email" required>
+                    <textarea name="message" rows="5" placeholder="Your Message" data-lang="your-message" data-en="Your Message" data-pl="Twoja wiadomość" required></textarea>
+                    <button type="submit" data-lang="send" data-en="Send" data-pl="Wyślij">Send</button>
                 </form>
             </div>
         </section>
@@ -190,7 +212,12 @@
 
     <footer>
         <div class="container">
-            <p>© 2024 ETC Software House. All rights reserved.</p>
+            <p data-lang="copyright" data-en="© 2024 ETC Software House. All rights reserved." data-pl="© 2024 ETC Software House. Wszelkie prawa zastrzeżone.">© 2024 ETC Software House. All rights reserved.</p>
+            <nav>
+                <a href="services.html" data-lang="services" data-en="Services" data-pl="Usługi">Services</a>
+                <a href="about.html" data-lang="about" data-en="About" data-pl="O nas">About</a>
+                <a href="contact.html" data-lang="contact" data-en="Contact" data-pl="Kontakt">Contact</a>
+            </nav>
         </div>
     </footer>
 
