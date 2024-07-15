@@ -51,23 +51,23 @@
     <header>
       <nav class="navbar">
           <a href="../index.html" class="nav-branding">
-              <h1 class="welcome-title" data-lang="welcome-title">ETC Software House</h1>
+              <h1 class="welcome-title" data-lang="welcome-title" data-en="ETC" data-pl="ETC">ETC Software House</h1>
           </a>
           <ul class="nav-menu">
               <li class="nav-item">
-              <a href="services.html" data-lang="services" class="nav-link">Services</a>
+              <a href="services.html" data-lang="services" data-en="Services" data-pl="Usługi" class="nav-link">Services</a>
               </li>
               <li class="nav-item">
-              <a href="about.html" data-lang="about" class="nav-link">About</a>
+              <a href="about.html" data-lang="about" data-en="About" data-pl="O nas" class="nav-link">About</a>
               </li>
               <li class="nav-item">
-              <a href="contact.html" data-lang="contact" class="nav-link">Contact</a>
+              <a href="contact.html" data-lang="contact" data-en="Contact" data-pl="Kontakt" class="nav-link">Contact</a>
               </li>
               <li class="nav-item">
               <a href="faq.html" class="nav-link">FAQ</a>
               </li>
               <li class="nav-item">
-              <button id="language-toggle" data-lang="language-toggle">EN / PL</button>
+              <button id="language-toggle" data-lang="language-toggle" data-en="EN / PL" data-pl="PL / EN">EN / PL</button>
               </li>
               <li class="nav-item">
               <button id="dark-mode-toggle" aria-label="Toggle Dark Mode" data-lang="dark-mode-toggle">
@@ -87,7 +87,7 @@
       <section id="contact-details">
         <div class="card">
           <div class="contact-info">
-              <h2>Contact Information</h2>
+              <h2 data-lang="contact-information" data-en="Contact Information" data-pl="Informacje kontaktowe">Contact Information</h2>
               <p>Email: <a href="mailto:info@example.com">info@example.com</a></p>
               <p>Phone: <a href="tel:+1234567890">+1 234 567 890</a></p>
               <p>Address: 123 Main Street, Anytown, USA</p>
@@ -95,7 +95,7 @@
         </div>
         <div class="card">
           <div class="map">
-              <h2>Our Location</h2>
+              <h2 data-lang="our-location" data-en="Our Location" data-pl="Nasza lokalizacja">Our Location</h2>
               <iframe 
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8354345092736!2d144.95373531531667!3d-37.81720997975179!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf577d1a0d4062b0!2s123%20Main%20St%2C%20Melbourne%20VIC%203000%2C%20Australia!5e0!3m2!1sen!2sus!4v1614825486045!5m2!1sen!2sus" 
                   width="600" 
@@ -109,23 +109,26 @@
       </section>
       <section id="contact">
         <div class="card">
-            <h2 data-lang="contact">Contact Us</h2>
+            <h2 data-lang="contact" data-en="Contact Us" data-pl="Kontakt">Contact Us</h2>
             <form netlify>
-                <input type="text" name="name" placeholder="Your Name" data-lang="your-name" required>
-                <input type="email" name="email" placeholder="Your Email" data-lang="your-email" required>
-                <textarea name="message" rows="5" placeholder="Your Message" data-lang="your-message" required></textarea>
-                <button type="submit" data-lang="send">Send</button>
+                <input type="text" name="name" placeholder="Your Name" data-lang="your-name" data-en="Your Name" data-pl="Twoje imię" required>
+                <input type="email" name="email" placeholder="Your Email" data-lang="your-email" data-en="Your Email" data-pl="Twój email" required>
+                <textarea name="message" rows="5" placeholder="Your Message" data-lang="your-message" data-en="Your Message" data-pl="Twoja wiadomość" required></textarea>
+                <button type="submit" data-lang="send" data-en="Send" data-pl="Wyślij">Send</button>
             </form>
         </div>
-      </section>
+    </section>
     </main>
     <footer>
       <div class="container">
-        <p data-lang="copyright">
-          © 2024 ETC Software House. All rights reserved.
-        </p>
+          <p data-lang="copyright" data-en="© 2024 ETC Software House. All rights reserved." data-pl="© 2024 ETC Software House. Wszelkie prawa zastrzeżone.">© 2024 ETC Software House. All rights reserved.</p>
+          <nav>
+              <a href="services.html" data-lang="services" data-en="Services" data-pl="Usługi">Services</a>
+              <a href="about.html" data-lang="about" data-en="About" data-pl="O nas">About</a>
+              <a href="contact.html" data-lang="contact" data-en="Contact" data-pl="Kontakt">Contact</a>
+          </nav>
       </div>
-    </footer>
+  </footer>
     <script src="../scripts/dlmode.js"></script>
     <script src="../scripts/language-toggle.js"></script>
     <script src="../scripts/hamburger.js"></script>
