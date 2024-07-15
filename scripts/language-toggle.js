@@ -16,9 +16,9 @@ document.addEventListener('DOMContentLoaded', () => {
     function setLanguage(language) {
         elementsToTranslate.forEach(element => {
             const key = element.getAttribute('data-lang');
-            const text = element.getAttribute(`data-${language}`);
-            if (text) {
-                element.textContent = text;
+            const html = element.getAttribute(`data-${language}`);
+            if (html) {
+                element.innerHTML = html;
             }
         });
         localStorage.setItem('language', language);
