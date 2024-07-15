@@ -540,3 +540,23 @@ body.dark-mode #contact form textarea:focus {
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     }
 }
+@media (max-width: 768px) {
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000; 
+    }
+  
+    body {
+      padding-top: 90px;
+    }
+  
+    .container {
+      margin-top: 20px;
+    }
+
+    .navbar{
+        height: 90px;
+    }
+  }
