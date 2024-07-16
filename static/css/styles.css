@@ -440,10 +440,6 @@ footer nav a:hover {
         margin: 10px 0;
     }
 
-    .features-grid {
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    }
-
     .content-wrapper, .content-wrapper.reverse {
         flex-direction: column;
     }
@@ -492,8 +488,8 @@ footer nav a:hover {
     }
 
     .features-grid {
-        grid-template-columns: repeat(3, 1fr);
         gap: 10px;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     }
 
     .feature-card h3 {
