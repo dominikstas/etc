@@ -115,8 +115,63 @@ a {
     color: #fff;
     text-align: center;
 }
+.hero1 {
+    background: url(../images/electrician-1288717_1280.jpg) no-repeat center center/cover;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+}
+.hero2 {
+    background: url(../images/jason-leung-1mFg9zzIvT8-unsplash.jpg) no-repeat center center/cover;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+}
+.hero3 {
+    background: url(../images/worker-196309_1280.jpg) no-repeat center center/cover;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+}
+.hero4 {
+    background: url(../images/startup-3267505_1280.jpg) no-repeat center center/cover;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+}
 
 .hero h1 {
+    font-size: 3em;
+    animation: fadeInDown 1s;
+}
+
+.hero1 h1 {
+    font-size: 3em;
+    animation: fadeInDown 1s;
+}
+
+.hero2 h1 {
+    font-size: 3em;
+    animation: fadeInDown 1s;
+}
+
+.hero3 h1 {
+    font-size: 3em;
+    animation: fadeInDown 1s;
+}
+.hero4 h1 {
     font-size: 3em;
     animation: fadeInDown 1s;
 }
