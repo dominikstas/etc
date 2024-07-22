@@ -433,10 +433,10 @@ footer nav a:hover {
 }
 
 .founder-card img {
-    width: 100%;
+    width: 50%;
     height: auto;
-    border-radius: 50%;
     margin-bottom: 10px;
+    
 }
 
 .founder-card h4 {
