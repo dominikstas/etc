@@ -3,46 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Strona w budowie</title>
+    <title>Nasza Firma - Wkrótce</title>
     <style>
-        body {
+        body, html {
             margin: 0;
             padding: 0;
             font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
+            height: 100%;
+        }
+        .hero {
+            min-height: 100vh;
+            background: linear-gradient(to bottom right, #1a1a2e, #16213e, #0f3460);
             display: flex;
-            justify-content: center;
             align-items: center;
-            height: 100vh;
-            overflow: hidden;
+            justify-content: center;
+            color: #e94560;
+            text-align: center;
+            padding: 20px;
         }
         .container {
-            text-align: center;
+            max-width: 800px;
         }
         h1 {
             font-size: 3rem;
-            color: #333;
+            margin-bottom: 20px;
         }
-        .gear {
-            font-size: 5rem;
-            animation: spin 4s linear infinite;
+        .highlight {
+            color: #f0c929;
         }
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
         }
-        .message {
-            font-size: 1.5rem;
-            color: #666;
-            margin-top: 20px;
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        input[type="email"] {
+            padding: 10px;
+            width: 100%;
+            max-width: 300px;
+            margin-bottom: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #e94560;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #d63551;
+        }
+        .features {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 50px;
+        }
+        .feature {
+            flex: 1;
+            margin: 0 10px;
+        }
+        .feature h3 {
+            color: #f0c929;
+        }
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2rem;
+            }
+            .features {
+                flex-direction: column;
+            }
+            .feature {
+                margin-bottom: 20px;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Strona w budowie</h1>
-        <div class="gear">⚙️</div>
-        <p class="message">Pracujemy nad czymś wyjątkowym. Wróć wkrótce!</p>
+    <div class="hero">
+        <div class="container">
+            <h1>Tworzymy <span class="highlight">Przyszłość</span> Internetu</h1>
+            <p>Nasza firma wkrótce zrewolucjonizuje sposób, w jaki tworzone są strony internetowe dla firm. Bądź pierwszym, który dowie się o naszym starcie!</p>
+            <form id="notify-form">
+                <input type="email" placeholder="Twój adres e-mail" required>
+                <button type="submit">Powiadom mnie</button>
+            </form>
+            
+            </div>
+        </div>
     </div>
+    <script>
+        document.getElementById('notify-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Dziękujemy za zainteresowanie! Powiadomimy Cię, gdy będziemy gotowi.');
+        });
+    </script>
 </body>
 </html>
