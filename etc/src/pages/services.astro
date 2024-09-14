@@ -1,0 +1,30 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ServiceCard from '../components/ServiceCard.astro';
+---
+
+<Layout title="Nasze usługi - Firma Web Design">
+  <h1>Nasze usługi</h1>
+  <div class="services-grid">
+    <ServiceCard 
+      title="Strony firmowe" 
+      description="Profesjonalne strony internetowe dla firm" 
+    />
+    <ServiceCard 
+      title="Sklepy internetowe" 
+      description="Funkcjonalne sklepy online" 
+    />
+    <ServiceCard 
+      title="Aplikacje webowe" 
+      description="Niestandardowe aplikacje internetowe" 
+    />
+  </div>
+</Layout>
+
+<style>
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+</style>
