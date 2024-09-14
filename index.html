@@ -3,46 +3,146 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Strona w budowie</title>
+    <title>Nasza Firma - Wkrótce</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
-        body {
+        * {
             margin: 0;
             padding: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            min-height: 100vh;
             display: flex;
-            justify-content: center;
             align-items: center;
-            height: 100vh;
-            overflow: hidden;
+            justify-content: center;
+            background: linear-gradient(to bottom right, #38B2AC, #3B82F6);
+            color: white;
+            padding: 20px;
         }
         .container {
+            max-width: 1000px;
             text-align: center;
         }
         h1 {
-            font-size: 3rem;
-            color: #333;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            line-height: 1.2;
         }
-        .gear {
-            font-size: 5rem;
-            animation: spin 4s linear infinite;
+        .highlight {
+            color: #FCD34D;
+            text-decoration: underline wavy #FCD34D 2px;
+            text-underline-offset: 8px;
         }
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+        p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
         }
-        .message {
-            font-size: 1.5rem;
-            color: #666;
-            margin-top: 20px;
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 3rem;
+        }
+        input[type="email"] {
+            width: 100%;
+            max-width: 300px;
+            padding: 0.75rem 1rem;
+            margin-bottom: 0.5rem;
+            border: none;
+            border-radius: 0.5rem;
+            font-size: 1rem;
+        }
+        button {
+            background-color: #FCD34D;
+            color: #1E40AF;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        button:hover {
+            background-color: #FDE68A;
+        }
+        .arrow-icon {
+            margin-left: 0.5rem;
+            width: 20px;
+            height: 20px;
+        }
+        .features {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            gap: 1.5rem;
+        }
+        .feature {
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            backdrop-filter: blur(10px);
+        }
+        .feature h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+        @media (min-width: 640px) {
+            h1 {
+                font-size: 3.5rem;
+            }
+            form {
+                flex-direction: row;
+                justify-content: center;
+            }
+            input[type="email"] {
+                margin-bottom: 0;
+                margin-right: 0.5rem;
+            }
+            .features {
+                grid-template-columns: repeat(3, 1fr);
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Strona w budowie</h1>
-        <div class="gear">⚙️</div>
-        <p class="message">Pracujemy nad czymś wyjątkowym. Wróć wkrótce!</p>
+        <h1>Tworzymy <span class="highlight">Przyszłość</span> Internetu</h1>
+        <p>Nasza firma wkrótce zrewolucjonizuje sposób, w jaki tworzone są strony internetowe. Bądź pierwszym, który dowie się o naszym starcie!</p>
+        <form id="notify-form">
+            <input type="email" placeholder="Twój adres e-mail" required>
+            <button type="submit">
+                Powiadom mnie
+                <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+            </button>
+        </form>
+        <div class="features">
+            <div class="feature">
+                <h3>Błyskawiczne</h3>
+                <p>Ultraszybkie strony</p>
+            </div>
+            <div class="feature">
+                <h3>Responsywne</h3>
+                <p>Idealne na każdym urządzeniu</p>
+            </div>
+            <div class="feature">
+                <h3>Dopasowane do rynku</h3>
+                <p>Przyciągaj klientów</p>
+            </div>
+        </div>
     </div>
+    <script>
+        document.getElementById('notify-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Dziękujemy za zainteresowanie! Powiadomimy Cię, gdy będziemy gotowi.');
+        });
+    </script>
 </body>
 </html>
