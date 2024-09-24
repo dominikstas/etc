@@ -4,6 +4,7 @@
     padding: 0;
     box-sizing: border-box;
   }
+
   body {
     font-family: "Poppins", sans-serif;
     min-height: 100vh;
@@ -14,43 +15,50 @@
     color: white;
     padding: 20px;
   }
+
   .container {
     max-width: 1000px;
     text-align: center;
   }
+
   h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
     font-weight: 700;
     margin-bottom: 1rem;
     line-height: 1.2;
   }
+
   .highlight {
     color: #fcd34d;
-    text-decoration: underline wavy #fcd34d 2px;
+    text-decoration: underline wavy #fcd34d 3px;
     text-underline-offset: 8px;
   }
+
   p {
     font-size: 1.25rem;
     margin-bottom: 2rem;
   }
+
   form {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
   }
+
   input[type="email"] {
     width: 100%;
-    max-width: 300px;
+    max-width: 350px;
     padding: 0.75rem 1rem;
     margin-bottom: 0.5rem;
     border: none;
     border-radius: 0.5rem;
     font-size: 1rem;
   }
+
   button {
-    background-color: #fcd34d;
-    color: #1e40af;
+    background-color: #f59e0b;
+    color: #fff;
     border: none;
     padding: 0.75rem 1.5rem;
     border-radius: 0.5rem;
@@ -61,41 +69,50 @@
     align-items: center;
     justify-content: center;
   }
+
   button:hover {
-    background-color: #fde68a;
+    background-color: #fbbf24;
   }
+
   .arrow-icon {
     margin-left: 0.5rem;
     width: 20px;
     height: 20px;
   }
+
   .features {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     gap: 1.5rem;
   }
+
   .feature {
     background-color: rgba(255, 255, 255, 0.2);
     padding: 1.5rem;
     border-radius: 0.5rem;
     backdrop-filter: blur(10px);
   }
+
   .feature h3 {
     font-size: 1.25rem;
     margin-bottom: 0.5rem;
   }
+
   @media (min-width: 640px) {
     h1 {
       font-size: 3.5rem;
     }
+
     form {
       flex-direction: row;
       justify-content: center;
     }
+
     input[type="email"] {
       margin-bottom: 0;
       margin-right: 0.5rem;
     }
+
     .features {
       grid-template-columns: repeat(3, 1fr);
     }
@@ -103,15 +120,17 @@
 </style>
 
 <div class="container">
-  <h1>Tworzymy <span class="highlight">Przyszłość</span> Internetu</h1>
+  <h1>
+    <span class="highlight">Zwiększ swoje zyski</span> dzięki lepszej stronie internetowej
+  </h1>
   <p>
-    Niedługo zrewolucjonizujemy sposób, w jaki tworzone są strony internetowe
-    dla firm. Bądź pierwszym, który dowie się o naszym starcie!
+    Zoptymalizuj swój wizerunek w sieci i zdobądź więcej klientów. Pokaż się w
+    sieci z najlepszej strony!
   </p>
   <form id="notify-form">
     <input type="email" placeholder="Twój adres e-mail" required />
     <button type="submit">
-      Powiadom mnie
+      Skontaktuj się teraz
       <svg
         class="arrow-icon"
         viewBox="0 0 24 24"
@@ -126,18 +145,20 @@
       </svg>
     </button>
   </form>
+  <p>Otrzymaj bezpłatną konsultację i poznaj możliwości zwiększenia zysków!</p>
+
   <div class="features">
     <div class="feature">
       <h3>Błyskawiczne</h3>
-      <p>Ultraszybkie strony</p>
+      <p>Tworzymy ultraszybkie strony, które zwiększają konwersje.</p>
     </div>
     <div class="feature">
       <h3>Responsywne</h3>
-      <p>Idealne na każdym urządzeniu</p>
+      <p>Idealnie działają na każdym urządzeniu.</p>
     </div>
     <div class="feature">
       <h3>Dopasowane do rynku</h3>
-      <p>Przyciągaj klientów</p>
+      <p>Zadbaj o strategię, która przyciągnie właściwych klientów.</p>
     </div>
   </div>
 </div>
