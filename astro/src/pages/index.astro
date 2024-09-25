@@ -1,5 +1,6 @@
 ---
 import Hero from "../components/Hero.astro";
+import About from "../components/About.astro";
 ---
 
 <html lang="en">
@@ -9,8 +10,26 @@ import Hero from "../components/Hero.astro";
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>Astro</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+        min-height: 100vh;
+        background: linear-gradient(to bottom right, #38b2ac, #3b82f6);
+        color: white;
+        padding: 20px;
+      }
+    </style>
   </head>
   <body>
     <Hero />
+
+    <About />
   </body>
 </html>

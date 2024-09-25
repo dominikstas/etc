@@ -1,24 +1,13 @@
 <style>
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-
-  body {
-    font-family: "Poppins", sans-serif;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(to bottom right, #38b2ac, #3b82f6);
-    color: white;
-    padding: 20px;
-  }
-
   .container {
     max-width: 1000px;
     text-align: center;
+    height: 82vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
   }
 
   h1 {
@@ -79,44 +68,6 @@
     width: 20px;
     height: 20px;
   }
-
-  .features {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    gap: 1.5rem;
-  }
-
-  .feature {
-    background-color: rgba(255, 255, 255, 0.2);
-    padding: 1.5rem;
-    border-radius: 0.5rem;
-    backdrop-filter: blur(10px);
-  }
-
-  .feature h3 {
-    font-size: 1.25rem;
-    margin-bottom: 0.5rem;
-  }
-
-  @media (min-width: 640px) {
-    h1 {
-      font-size: 3.5rem;
-    }
-
-    form {
-      flex-direction: row;
-      justify-content: center;
-    }
-
-    input[type="email"] {
-      margin-bottom: 0;
-      margin-right: 0.5rem;
-    }
-
-    .features {
-      grid-template-columns: repeat(3, 1fr);
-    }
-  }
 </style>
 
 <div class="container">
@@ -146,19 +97,4 @@
     </button>
   </form>
   <p>Otrzymaj bezpłatną konsultację i poznaj możliwości zwiększenia zysków!</p>
-
-  <div class="features">
-    <div class="feature">
-      <h3>Błyskawiczne</h3>
-      <p>Tworzymy ultraszybkie strony, które zwiększają konwersje.</p>
-    </div>
-    <div class="feature">
-      <h3>Responsywne</h3>
-      <p>Idealnie działają na każdym urządzeniu.</p>
-    </div>
-    <div class="feature">
-      <h3>Dopasowane do rynku</h3>
-      <p>Zadbaj o strategię, która przyciągnie właściwych klientów.</p>
-    </div>
-  </div>
 </div>
