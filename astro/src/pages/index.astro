@@ -1,6 +1,7 @@
 ---
 import Hero from "../components/Hero.astro";
 import Why from "../components/Why.astro";
+import Portfolio from "../components/Portfolio";
 ---
 
 <html lang="en">
@@ -31,5 +32,7 @@ import Why from "../components/Why.astro";
     <Hero />
 
     <Why />
+
+    <Portfolio client:load />
   </body>
 </html>
