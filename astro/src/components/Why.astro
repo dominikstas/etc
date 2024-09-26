@@ -1,15 +1,25 @@
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+/>
+
 <style>
   .why-us {
-    padding: 4rem 0; /* Więcej miejsca na górze i dole */
+    padding: 4rem 0;
     text-align: center;
-    background: rgba(0, 0, 0, 0.3); /* Subtelne tło dla kontrastu */
+    background: linear-gradient(
+      135deg,
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.3)
+    ); /* Lepsze tło z gradientem */
     border-radius: 0.75rem;
+    color: #fff;
   }
 
   .why-us h2 {
     font-size: 2.5rem;
     margin-bottom: 1.5rem;
-    color: #fcd34d; /* Kolor podkreślający */
+    color: #fcd34d;
   }
 
   .why-us p {
@@ -31,23 +41,55 @@
   }
 
   .feature-box {
-    background-color: rgba(255, 255, 255, 0.3); /* Zwiększony kontrast */
+    background-color: rgba(
+      255,
+      255,
+      255,
+      0.15
+    ); /* Przejrzysty biały kontrast */
     padding: 2rem;
     border-radius: 0.75rem;
     text-align: center;
+    transition: transform 0.3s ease;
+  }
+
+  .feature-box:hover {
+    transform: translateY(-10px); /* Dodany efekt hover */
   }
 
   .feature-box h3 {
     font-size: 1.75rem;
     margin-bottom: 0.75rem;
-    color: #fcd34d; /* Kolor wyróżniający nagłówki */
+    color: #fcd34d;
   }
 
   .feature-box p {
     font-size: 1.25rem;
   }
+
+  .feature-box .icon {
+    font-size: 3rem;
+    color: #fcd34d;
+    margin-bottom: 1rem;
+  }
+
+  /* Ulepszenia responsywne dla mniejszych ekranów */
+  @media (max-width: 768px) {
+    .feature-box {
+      padding: 1.5rem;
+    }
+
+    .feature-box h3 {
+      font-size: 1.5rem;
+    }
+
+    .feature-box p {
+      font-size: 1rem;
+    }
+  }
 </style>
 
+<!-- HTML -->
 <div class="why-us">
   <h2>Dlaczego my</h2>
   <p>
@@ -56,6 +98,8 @@
   </p>
   <div class="features">
     <div class="feature-box">
+      <i class="fas fa-briefcase icon"></i>
+      <!-- Ikonka dla profesjonalizmu -->
       <h3>Profesjonalizm</h3>
       <p>
         Nasze doświadczenie gwarantuje najwyższą jakość usług i pełne
@@ -63,6 +107,8 @@
       </p>
     </div>
     <div class="feature-box">
+      <i class="fas fa-lightbulb icon"></i>
+      <!-- Ikonka dla innowacji -->
       <h3>Innowacje</h3>
       <p>
         Stosujemy najnowsze technologie, aby Twoja strona wyróżniała się na tle
@@ -70,6 +116,8 @@
       </p>
     </div>
     <div class="feature-box">
+      <i class="fas fa-chart-line icon"></i>
+      <!-- Ikonka dla wyników -->
       <h3>Wyniki</h3>
       <p>
         Pomagamy zwiększyć konwersję i ruch na Twojej stronie, co przekłada się
