@@ -1,23 +1,22 @@
-import React, { useState, useEffect } from 'react';
-import '/public/Portfolio.css';
+import React, { useState } from 'react';
 
 const projects = [
   {
     title: "Strona Projekt 1",
     description: "Opis projektu nr 1, który wykonaliśmy. Ten projekt skupiał się na...",
-    imageUrl: "/images/project1.jpg",
+    imageUrl: "/api/placeholder/800/600",
     url: "https://project1.com",
   },
   {
     title: "Strona Projekt 2",
     description: "Opis projektu nr 2, który wykonaliśmy. Głównym celem było...",
-    imageUrl: "/images/project2.jpg",
+    imageUrl: "/api/placeholder/800/600",
     url: "https://project2.com",
   },
   {
     title: "Strona Projekt 3",
     description: "Opis projektu nr 3, który wykonaliśmy. Klient oczekiwał...",
-    imageUrl: "/images/project3.jpg",
+    imageUrl: "/api/placeholder/800/600",
     url: "https://project3.com",
   },
 ];
@@ -30,7 +29,7 @@ const Portfolio = () => {
   };
 
   const handlePrev = () => {
-    setCurrentIndex((prevIndex) => 
+    setCurrentIndex((prevIndex) =>
       prevIndex === 0 ? projects.length - 1 : prevIndex - 1
     );
   };
@@ -39,6 +38,9 @@ const Portfolio = () => {
 
   return (
     <div className="portfolio-container">
+      <h1 className="portfolio-title">
+        Nasze <span className="highlight">Projekty</span>
+      </h1>
       <div className="project-card">
         <div className="image-container">
           <img src={imageUrl} alt={title} className="project-image" />
@@ -53,6 +55,110 @@ const Portfolio = () => {
           </a>
         </div>
       </div>
+      <style jsx>{`
+  .portfolio-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+    color: #e2e8f0;
+    border-radius: 8px; 
+  }
+
+
+
+  .portfolio-title {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    margin-top: 0; 
+  }
+
+  .highlight {
+    color: #fcd34d;
+    text-underline-offset: 8px;
+  }
+
+  .project-card {
+    background-color: #2d3748;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.5rem;
+    padding: 1rem; 
+  }
+
+  .image-container {
+    position: relative;
+    height: 300px;
+    background-color: #1a202c; 
+  }
+
+  .project-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0.5rem; 
+  }
+
+  .nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    font-size: 1.5rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 50%; 
+  }
+
+  .nav-button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+
+  .prev-button {
+    left: 1rem;
+  }
+
+  .next-button {
+    right: 1rem;
+  }
+
+  .project-info {
+    padding: 1.5rem;
+    text-align: left; 
+  }
+
+  .project-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+
+  .project-description {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .project-link {
+    display: inline-block;
+    background-color: #f59e0b;
+    color: #1a202c;
+    text-decoration: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.25rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+  }
+
+  .project-link:hover {
+    background-color: #fbbf24;
+  }
+`}</style>
+
     </div>
   );
 };
