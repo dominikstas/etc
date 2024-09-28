@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 
 const projects = [
   {
-    title: "Strona Projekt 1",
-    description: "Opis projektu nr 1, który wykonaliśmy. Ten projekt skupiał się na...",
-    imageUrl: "/api/placeholder/800/600",
-    url: "https://project1.com",
+    title: "Zdalne korki",
+    description: "Strona całkowicie utworzona i prowadzona przez nas. Projekt został wykonany przy użyciu Astro, i postawiony na cloudflare. Dbamy też o SEO oraz content na stronie, co wpływa na jej obecność w wyszukiwarkach.",
+    imageUrl: "/public/zdalne-korki.png",
+    url: "https://zdalne-korki.pl",
   },
   {
     title: "Strona Projekt 2",
@@ -55,7 +55,8 @@ const Portfolio = () => {
           </a>
         </div>
       </div>
-      <style jsx>{`
+      <style jsx>
+        {`
   .portfolio-container {
     max-width: 1000px;
     margin: 0 auto;
@@ -90,7 +91,7 @@ const Portfolio = () => {
 
   .image-container {
     position: relative;
-    height: 300px;
+    height: 500px;
     background-color: #1a202c; 
   }
 
