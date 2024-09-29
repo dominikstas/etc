@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaHtml5, FaCss3Alt, FaReact, FaPython, FaDatabase, FaCloudflare, FaChartLine, FaToolbox } from 'react-icons/fa';
+import { FaHtml5, FaCss3Alt, FaReact, FaPython, FaDatabase, FaCloudflare, FaChartLine, FaToolbox, FaGlobe, FaHandshake, FaMegaport, FaChartBar, FaLock, FaMobileAlt } from 'react-icons/fa';
 import { SiAstro, SiFlask, SiMysql, SiUmami } from 'react-icons/si';
 
 const tools = [
@@ -9,9 +9,18 @@ const tools = [
   { name: 'React', description: 'Biblioteka JavaScript do budowania interfejsów użytkownika', icon: <FaReact /> },
   { name: 'Flask', description: 'Lekki framework backendowy w Pythonie', icon: <SiFlask /> },
   { name: 'MySQL', description: 'System zarządzania relacyjnymi bazami danych', icon: <SiMysql /> },
-  { name: 'Cloudflare', description: 'Platforma do dostarczania treści i bezpieczeństwa', icon: <FaCloudflare /> },
-  { name: 'Umami', description: 'Prywatna alternatywa dla Google Analytics', icon: <SiUmami /> },
+  { name: 'Cloudflare', description: 'To tutaj umieszczamy twoją stronę', icon: <FaCloudflare /> },
+  { name: 'Umami', description: 'Narzędzie do analizy ruchu na stronie', icon: <SiUmami /> },
   { name: 'DevOps', description: 'Dbamy o to, by aktualizacje strony przechodziły gładko i bezproblemowo', icon: <FaToolbox /> },
+];
+
+const importancePoints = [
+  { icon: <FaGlobe />, title: 'Globalna Obecność', description: 'Zwiększ widoczność swojej firmy na arenie międzynarodowej, docierając do klientów 24/7.' },
+  { icon: <FaHandshake />, title: 'Budowanie Zaufania', description: 'Profesjonalna strona buduje wiarygodność i zaufanie wśród potencjalnych klientów.' },
+  { icon: <FaMegaport />, title: 'Bezpośredni Kontakt', description: 'Umożliw klientom łatwy kontakt i interakcję z Twoją firmą.' },
+  { icon: <FaChartBar />, title: 'Wzrost Sprzedaży', description: 'Wykorzystaj stronę jako platformę do prezentacji i sprzedaży produktów lub usług.' },
+  { icon: <FaLock />, title: 'Kontrola Wizerunku', description: 'Zarządzaj swoim wizerunkiem online i kształtuj narrację o swojej marce.' },
+  { icon: <FaMobileAlt />, title: 'Mobilna Dostępność', description: 'Bądź dostępny dla klientów na wszystkich urządzeniach, w każdym miejscu i czasie.' },
 ];
 
 const WebsiteCreation = () => {
@@ -42,15 +51,16 @@ const WebsiteCreation = () => {
       </div>
 
       <div className="importance-section">
-        <h3>Dlaczego Strony Internetowe Są Ważne?</h3>
-        <ul>
-          <li>Zwiększają widoczność Twojej firmy w sieci</li>
-          <li>Budują wiarygodność i profesjonalny wizerunek</li>
-          <li>Umożliwiają bezpośredni kontakt z klientami</li>
-          <li>Działają jako platforma do prezentacji produktów i usług</li>
-          <li>Wspierają marketing i sprzedaż online</li>
-          <li>Zapewniają dostęp do informacji 24/7</li>
-        </ul>
+        <h3>Dlaczego Strony Internetowe Są Kluczowe dla Twojego Biznesu?</h3>
+        <div className="importance-grid">
+          {importancePoints.map((point, index) => (
+            <div key={index} className="importance-card">
+              <div className="importance-icon">{point.icon}</div>
+              <h4>{point.title}</h4>
+              <p>{point.description}</p>
+            </div>
+          ))}
+        </div>
       </div>
 
       <style jsx>{`
@@ -123,31 +133,47 @@ const WebsiteCreation = () => {
         }
         .importance-section h3 {
           font-size: 1.75rem;
+          margin-bottom: 1.5rem;
+          color: #fcd34d;
+          text-align: center;
+        }
+        .importance-grid {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 1.5rem;
+        }
+        .importance-card {
+          background-color: #3d4c63;
+          border-radius: 0.5rem;
+          padding: 1.5rem;
+          text-align: center;
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .importance-card:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .importance-icon {
+          font-size: 2.5rem;
+          color: #fcd34d;
           margin-bottom: 1rem;
+        }
+        .importance-card h4 {
+          font-size: 1.2rem;
           color: #fcd34d;
+          margin-bottom: 0.5rem;
         }
-        .importance-section ul {
-          list-style-type: none;
-          padding-left: 0;
-        }
-        .importance-section li {
-          margin-bottom: 0.75rem;
-          padding-left: 1.5rem;
-          position: relative;
-        }
-        .importance-section li::before {
-          content: "•";
-          color: #fcd34d;
-          position: absolute;
-          left: 0;
+        .importance-card p {
+          font-size: 0.9rem;
+          line-height: 1.4;
         }
         @media (max-width: 1024px) {
-          .tools-grid {
+          .tools-grid, .importance-grid {
             grid-template-columns: repeat(2, 1fr);
           }
         }
         @media (max-width: 768px) {
-          .tools-grid {
+          .tools-grid, .importance-grid {
             grid-template-columns: 1fr;
           }
         }
