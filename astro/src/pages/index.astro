@@ -1,4 +1,5 @@
 ---
+import Navbar from "../components/Navbar";
 import Hero from "../components/Hero.astro";
 import Why from "../components/Why.astro";
 import Portfolio from "../components/Portfolio";
@@ -31,14 +32,26 @@ import ContactCTA from "../components/ContactCTA";
     </style>
   </head>
   <body>
-    <Hero />
+    <Navbar />
 
-    <Why />
+    <section id="hero">
+      <Hero />
+    </section>
 
-    <Portfolio client:load />
+    <section id="why">
+      <Why />
+    </section>
 
-    <WebsiteCreation />
+    <section id="portfolio">
+      <Portfolio client:load />
+    </section>
 
-    <ContactCTA />
+    <section id="website-creation">
+      <WebsiteCreation />
+    </section>
+
+    <section id="contact">
+      <ContactCTA />
+    </section>
   </body>
 </html>
