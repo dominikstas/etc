@@ -1,11 +1,6 @@
-<link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-/>
-
 <style>
   .why-us {
-    padding: 4rem 0;
+    padding: 4rem 1rem; /* Zmniejszono padding dla lepszego dopasowania na mniejszych ekranach */
     text-align: center;
     background: linear-gradient(135deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3));
     border-radius: 0.75rem;
@@ -13,29 +8,29 @@
   }
 
   .why-us h2 {
-    font-size: 2.5rem;
+    font-size: clamp(2rem, 5vw, 2.5rem); /* Responsywna typografia */
     margin-bottom: 1.5rem;
     color: #fcd34d;
   }
 
   .why-us p {
-    font-size: 1.5rem;
-    margin-bottom: 3rem;
-    max-width: 800px;
+    font-size: clamp(1rem, 4vw, 1.5rem); /* Responsywne skalowanie tekstu */
+    margin-bottom: 2rem;
+    max-width: 90%;
     margin-left: auto;
     margin-right: auto;
   }
 
   .features {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Większa elastyczność kolumn */
+    gap: 1.5rem; /* Zmniejszono odstępy dla lepszego dopasowania */
     margin-top: 2rem;
   }
 
   .feature-box {
     background-color: rgba(255, 255, 255, 0.15);
-    padding: 2rem;
+    padding: 1.5rem;
     border-radius: 0.75rem;
     text-align: center;
     transition: transform 0.3s ease;
@@ -46,32 +41,28 @@
   }
 
   .feature-box h3 {
-    font-size: 1.75rem;
+    font-size: clamp(1.25rem, 3vw, 1.75rem); /* Responsywne nagłówki */
     margin-bottom: 0.75rem;
     color: #fcd34d;
   }
 
   .feature-box p {
-    font-size: 1.25rem;
+    font-size: clamp(0.875rem, 2.5vw, 1.25rem); /* Responsywny tekst */
   }
 
   .feature-box .icon {
-    font-size: 3rem;
+    font-size: clamp(2rem, 5vw, 3rem); /* Responsywna ikona */
     color: #fcd34d;
     margin-bottom: 1rem;
   }
 
   @media (max-width: 768px) {
-    .feature-box {
-      padding: 1.5rem;
+    .why-us {
+      padding: 3rem 1rem; /* Mniejsze marginesy dla urządzeń mobilnych */
     }
 
-    .feature-box h3 {
-      font-size: 1.5rem;
-    }
-
-    .feature-box p {
-      font-size: 1rem;
+    .features {
+      gap: 1rem; /* Zmniejszenie odstępów */
     }
   }
 </style>
@@ -85,7 +76,6 @@
   <div class="features">
     <div class="feature-box">
       <i class="fas fa-briefcase icon"></i>
-
       <h3>Profesjonalizm</h3>
       <p>
         Nasze doświadczenie gwarantuje najwyższą jakość usług i pełne
@@ -94,7 +84,6 @@
     </div>
     <div class="feature-box">
       <i class="fas fa-lightbulb icon"></i>
-
       <h3>Innowacje</h3>
       <p>
         Stosujemy najnowsze technologie, aby Twoja strona wyróżniała się na tle
@@ -103,7 +92,6 @@
     </div>
     <div class="feature-box">
       <i class="fas fa-chart-line icon"></i>
-
       <h3>Wyniki</h3>
       <p>
         Pomagamy zwiększyć konwersję i ruch na Twojej stronie, co przekłada się
