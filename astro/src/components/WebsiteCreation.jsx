@@ -43,9 +43,9 @@ const WebsiteCreation = () => {
             <div className="icon">{tool.icon}</div>
             <h3>{tool.name}</h3>
             <p>{tool.description}</p>
-            <a href={`/tools/${tool.name.toLowerCase()}`} className="tool-link">
-              Dowiedz się więcej →
-            </a>
+            {/* <a href={`/tools/${tool.name.toLowerCase()}`} className="tool-link">
+              Dowiedz się więcej → 
+            </a> */}
           </div>
         ))}
       </div>
