@@ -36,19 +36,21 @@ const WebsiteCreation = () => {
         </p>
       </section>
 
-      <section className="tools-grid">
-        <h2>Narzędzia i Technologie</h2>
-        {tools.map((tool, index) => (
-          <div key={index} className="tool-card">
-            <div className="icon">{tool.icon}</div>
-            <h3>{tool.name}</h3>
-            <p>{tool.description}</p>
-          </div>
-        ))}
+      <section className="tools-section">
+        <h2 className="section-header">Narzędzia i Technologie</h2>
+        <div className="tools-grid">
+          {tools.map((tool, index) => (
+            <div key={index} className="tool-card">
+              <div className="icon">{tool.icon}</div>
+              <h3>{tool.name}</h3>
+              <p>{tool.description}</p>
+            </div>
+          ))}
+        </div>
       </section>
 
       <section className="importance-section">
-        <h2>Dlaczego Warto Mieć Profesjonalną Stronę?</h2>
+        <h2 className="section-header">Dlaczego Warto Mieć Profesjonalną Stronę?</h2>
         <div className="importance-grid">
           {importancePoints.map((point, index) => (
             <div key={index} className="importance-card">
@@ -73,6 +75,12 @@ const WebsiteCreation = () => {
           text-align: center;
           margin-bottom: 2rem;
         }
+        .section-header {
+          text-align: center;
+          font-size: 2rem;
+          margin-bottom: 2rem;
+          color: #fcd34d;
+        }
         .highlight {
           color: #fcd34d;
         }
@@ -82,11 +90,13 @@ const WebsiteCreation = () => {
           margin-bottom: 2rem;
           text-align: center;
         }
+        .tools-section, .importance-section {
+          margin-bottom: 3rem;
+        }
         .tools-grid, .importance-grid {
           display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+          grid-template-columns: repeat(3, 1fr);
           gap: 2rem;
-          margin-bottom: 2rem;
         }
         .tool-card, .importance-card {
           background-color: #2d3748;
@@ -115,12 +125,21 @@ const WebsiteCreation = () => {
         }
 
         /* Responsive Styles */
+        @media (max-width: 1024px) {
+          .tools-grid, .importance-grid {
+            grid-template-columns: repeat(2, 1fr);
+          }
+        }
+
         @media (max-width: 768px) {
           .website-creation-container {
             padding: 1.5rem;
           }
           .section-title {
             font-size: 2rem;
+          }
+          .section-header {
+            font-size: 1.8rem;
           }
           .process-description {
             font-size: 1rem;
