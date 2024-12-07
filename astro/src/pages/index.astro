@@ -21,22 +21,64 @@ import ContactCTA from "../components/ContactCTA";
 
 
     <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
+      /* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-      body {
-        font-family: "Poppins", sans-serif;
-        min-height: 100vh;
-        width:fit-content;
-        background: linear-gradient(to bottom right, #38b2ac, #3b82f6);
-        color: white;
-        padding: 20px;
-      }
+body {
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+  width: 100%;
+  background: linear-gradient(to bottom right, #38b2ac, #3b82f6);
+  color: white;
+  padding: 20px;
+}
 
-      
+/* Responsive Styles */
+@media (max-width: 767px) {
+  body {
+    padding: 10px;
+  }
+
+  section {
+    padding: 20px;
+  }
+
+  #hero h1 {
+    font-size: 2.5rem;
+  }
+
+  #hero p {
+    font-size: 1rem;
+  }
+
+  #why .card {
+    width: 100%;
+  }
+
+  #portfolio .project {
+    width: 100%;
+  }
+
+  #website-creation .features-list li {
+    width: 100%;
+  }
+
+  #contact .cta-content {
+    padding: 20px;
+  }
+
+  #contact .cta-content h2 {
+    font-size: 1.8rem;
+  }
+
+  #contact .cta-content p {
+    font-size: 1rem;
+  }
+}
     </style>
   </head>
   <body>
