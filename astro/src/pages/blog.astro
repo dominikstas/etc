@@ -1,0 +1,42 @@
+---
+import SEO from '../components/SEO.astro';
+import BlogList from '../components/BlogList.jsx';
+
+const posts = [
+  { id: 1, title: "Jak wybrać idealną stronę internetową?", excerpt: "Dowiedz się, jakie cechy powinna mieć nowoczesna strona internetowa.", slug: "/blog/jak-wybrac-strone" },
+  { id: 2, title: "Korzyści z posiadania strony firmowej", excerpt: "Poznaj zalety prowadzenia biznesu online.", slug: "/blog/korzysci-strony-firmowej" },
+  { id: 3, title: "Technologie webowe na 2024 rok", excerpt: "Przegląd najnowszych trendów w tworzeniu stron internetowych.", slug: "/blog/technologie-webowe-2024" }
+];
+---
+
+<SEO 
+  title="Blog | Strona na Zamówienie" 
+  description="Odwiedź nasz blog, aby poznać najnowsze informacje o tworzeniu stron internetowych i nowoczesnych technologiach." 
+  url="/blog" 
+/>
+
+<section class="blog-page">
+  <h1>Blog</h1>
+  <p>Odkryj najnowsze informacje o tworzeniu stron internetowych i technologii webowej.</p>
+  <BlogList posts={posts} />
+</section>
+
+<style>
+  .blog-page {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1.5rem;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+  }
+
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    color: #555;
+    margin-bottom: 2rem;
+  }
+</style>
