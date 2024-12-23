@@ -1,111 +1,170 @@
----
-import Navbar from "../components/Navbar";
-import Hero from "../components/Hero.astro";
-import Why from "../components/Why.astro";
-import Portfolio from "../components/Portfolio";
-import WebsiteCreation from "../components/WebsiteCreation";
-import ContactCTA from "../components/ContactCTA";
-import BlogLink from "../components/BlogLink.astro";
----
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebDev Express | Szybkie i Proste Strony Internetowe</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50">
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <div class="text-2xl font-bold text-blue-600">WebDev Express</div>
+                <div class="flex space-x-8">
+                    <a href="#services" class="text-gray-700 hover:text-blue-600">Usługi</a>
+                    <a href="#process" class="text-gray-700 hover:text-blue-600">Proces</a>
+                    <a href="#pricing" class="text-gray-700 hover:text-blue-600">Cennik</a>
+                </div>
+            </div>
+        </div>
+    </nav>
 
-<html lang="en">
-  <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="generator" content={Astro.generator} />
+    <header class="bg-white">
+        <div class="max-w-6xl mx-auto px-4 py-16">
+            <div class="text-center">
+                <h1 class="text-4xl font-bold text-gray-900 mb-4">
+                    Profesjonalna Strona Internetowa w Kilka Dni
+                </h1>
+                <p class="text-xl text-gray-600 mb-8">
+                    Szybkie, proste i przystępne strony dla Twojej firmy
+                </p>
+                <a href="#contact" class="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 inline-block">
+                    Rozpocznij Projekt
+                </a>
+            </div>
+        </div>
+    </header>
 
-    {/* SEO Optimized Meta Tags */}
-    <title>Profesjonalne Strony Internetowe | Kompleksowe Usługi Webowe</title>
-    <meta name="description" content="Tworzymy nowoczesne, responsywne strony internetowe dla firm. Projektujemy skuteczne rozwiązania online, które zwiększają Twoją widoczność i sprzedaż." />
-    <meta name="keywords" content="strony internetowe, projektowanie stron, web design, strony www dla firm, responsywne strony, marketing internetowy" />
-    
-
-
-    <style>
-      /* Global Styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: "Poppins", sans-serif;
-  min-height: 100vh;
-  width: 100%;
-  background: linear-gradient(to bottom right, #38b2ac, #3b82f6);
-  color: white;
-  padding: 20px;
-}
-
-/* Responsive Styles */
-@media (max-width: 767px) {
-  body {
-    padding: 10px;
-  }
-
-  section {
-    padding: 20px;
-  }
-
-  #hero h1 {
-    font-size: 2.5rem;
-  }
-
-  #hero p {
-    font-size: 1rem;
-  }
-
-  #why .card {
-    width: 100%;
-  }
-
-  #portfolio .project {
-    width: 100%;
-  }
-
-  #website-creation .features-list li {
-    width: 100%;
-  }
-
-  #contact .cta-content {
-    padding: 20px;
-  }
-
-  #contact .cta-content h2 {
-    font-size: 1.8rem;
-  }
-
-  #contact .cta-content p {
-    font-size: 1rem;
-  }
-}
-    </style>
-  </head>
-  <body>
-    <!--  <Navbar client:only /> -->
-    <section id="hero">
-      <Hero />
+    <section id="benefits" class="py-16 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="text-2xl text-blue-600 mb-4">⚡</div>
+                    <h3 class="text-xl font-semibold mb-2">Szybka Realizacja</h3>
+                    <p class="text-gray-600">Gotowa strona w ciągu kilku dni roboczych, bez zbędnych opóźnień.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="text-2xl text-blue-600 mb-4">💰</div>
+                    <h3 class="text-xl font-semibold mb-2">Przystępne Ceny</h3>
+                    <p class="text-gray-600">Konkurencyjne stawki dzięki automatyzacji i gotowym komponentom.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="text-2xl text-blue-600 mb-4">🎯</div>
+                    <h3 class="text-xl font-semibold mb-2">Bez Komplikacji</h3>
+                    <p class="text-gray-600">Zajmujemy się technikaliami, Ty skupiasz się na swojej działalności.</p>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section id="why">
-      <Why />
+    <section id="process" class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Prosty Proces</h2>
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="text-2xl mb-4">1.</div>
+                    <h3 class="font-semibold mb-2">Konsultacja</h3>
+                    <p class="text-gray-600">Krótka rozmowa o potrzebach Twojej firmy</p>
+                </div>
+                <div class="text-center">
+                    <div class="text-2xl mb-4">2.</div>
+                    <h3 class="font-semibold mb-2">Projekt</h3>
+                    <p class="text-gray-600">Wybór szablonu i dostosowanie do Twoich preferencji</p>
+                </div>
+                <div class="text-center">
+                    <div class="text-2xl mb-4">3.</div>
+                    <h3 class="font-semibold mb-2">Realizacja</h3>
+                    <p class="text-gray-600">Szybkie wdrożenie strony</p>
+                </div>
+                <div class="text-center">
+                    <div class="text-2xl mb-4">4.</div>
+                    <h3 class="font-semibold mb-2">Publikacja</h3>
+                    <p class="text-gray-600">Gotowa strona w ciągu kilku dni</p>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section id="portfolio">
-      <Portfolio client:load />
+    <section id="pricing" class="py-16 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Przejrzyste Ceny</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold mb-4">Podstawowy</h3>
+                    <p class="text-3xl font-bold mb-4">2999 zł</p>
+                    <ul class="space-y-2 mb-8">
+                        <li>✓ Strona główna</li>
+                        <li>✓ 3 podstrony</li>
+                        <li>✓ Formularz kontaktowy</li>
+                        <li>✓ RWD</li>
+                    </ul>
+                    <a href="#contact" class="block text-center bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700">
+                        Wybierz
+                    </a>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-md border-2 border-blue-600">
+                    <h3 class="text-xl font-bold mb-4">Biznes</h3>
+                    <p class="text-3xl font-bold mb-4">4999 zł</p>
+                    <ul class="space-y-2 mb-8">
+                        <li>✓ Strona główna</li>
+                        <li>✓ 6 podstron</li>
+                        <li>✓ Blog</li>
+                        <li>✓ SEO</li>
+                        <li>✓ Analytics</li>
+                    </ul>
+                    <a href="#contact" class="block text-center bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700">
+                        Wybierz
+                    </a>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold mb-4">Premium</h3>
+                    <p class="text-3xl font-bold mb-4">7999 zł</p>
+                    <ul class="space-y-2 mb-8">
+                        <li>✓ Wszystko z pakietu Biznes</li>
+                        <li>✓ System CMS</li>
+                        <li>✓ Integracje</li>
+                        <li>✓ Szkolenie</li>
+                    </ul>
+                    <a href="#contact" class="block text-center bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700">
+                        Wybierz
+                    </a>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section id="website-creation">
-      <WebsiteCreation />
+    <section id="contact" class="py-16 bg-white">
+        <div class="max-w-3xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8">Rozpocznij Projekt</h2>
+            <form class="space-y-4">
+                <div>
+                    <label class="block text-gray-700 mb-2">Nazwa firmy</label>
+                    <input type="text" class="w-full p-2 border rounded-lg">
+                </div>
+                <div>
+                    <label class="block text-gray-700 mb-2">Email</label>
+                    <input type="email" class="w-full p-2 border rounded-lg">
+                </div>
+                <div>
+                    <label class="block text-gray-700 mb-2">Telefon</label>
+                    <input type="tel" class="w-full p-2 border rounded-lg">
+                </div>
+                <div>
+                    <label class="block text-gray-700 mb-2">Wiadomość</label>
+                    <textarea class="w-full p-2 border rounded-lg h-32"></textarea>
+                </div>
+                <button type="submit" class="w-full bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700">
+                    Wyślij
+                </button>
+            </form>
+        </div>
     </section>
 
-    <section id="blog">
-      <BlogLink />
-    </section>
-
-    <section id="contact">
-      <ContactCTA />
-    </section>
-  </body>
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <p>© 2024 WebDev Express. Wszystkie prawa zastrzeżone.</p>
+        </div>
+    </footer>
+</body>
 </html>
