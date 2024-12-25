@@ -188,7 +188,7 @@
     </footer>
 
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
+       document.addEventListener('DOMContentLoaded', () => {
   // Update year
   const yearElement = document.getElementById('currentYear');
   if (yearElement) {
@@ -207,9 +207,9 @@
 
   // Smooth scroll
   document.querySelectorAll('a[href^="#"]').forEach((anchor: Element) => {
-    anchor.addEventListener('click', function(e: Event) {
+    anchor.addEventListener('click', function(this: HTMLAnchorElement, e: Event) {
       e.preventDefault();
-      const href = (this as HTMLAnchorElement).getAttribute('href');
+      const href = this.getAttribute('href');
       if (href) {
         const target = document.querySelector(href);
         target?.scrollIntoView({
